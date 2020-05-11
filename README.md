@@ -12,7 +12,7 @@ To run this project you need to install packages from `requirements.txt` file, t
 
                   conda create --name env_name --file requirements.txt --yes
                   
-Above comand will create a virtual environment, so you need to activate it afterwards using below command:
+Above command will create a virtual environment, so you need to activate it afterwards using below command:
 
                   conda activate env_name
 
