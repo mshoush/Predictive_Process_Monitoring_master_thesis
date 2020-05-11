@@ -1,0 +1,5 @@
+dataset;bucket_enc;text_method_enc;cls;metric;score
+production;single_laststate;no_text;catboost;offline_total_avg;1.9226408004760742
+production;single_laststate;no_text;catboost;offline_total_std;0.0
+production;single_laststate;no_text;catboost;online_event_avg;0.00509974583979492
+production;single_laststate;no_text;catboost;online_event_std;0.004396439325028687

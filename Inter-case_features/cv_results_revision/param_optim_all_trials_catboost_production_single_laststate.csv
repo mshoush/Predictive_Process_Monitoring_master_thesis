@@ -1,0 +1,11 @@
+iter;param;value;nr_events;score;dataset;cls;method
+1;bagging_temperature;11.789497028020845;-1;0.8655271834366184;production;catboost;single_laststate
+1;colsample_bylevel;0.6810216334247973;-1;0.8655271834366184;production;catboost;single_laststate
+1;l2_leaf_reg;6.263571014125235;-1;0.8655271834366184;production;catboost;single_laststate
+1;learning_rate;0.21906239472515993;-1;0.8655271834366184;production;catboost;single_laststate
+1;max_depth;8.0;-1;0.8655271834366184;production;catboost;single_laststate
+1;n_clusters;3.0;-1;0.8655271834366184;production;catboost;single_laststate
+1;n_estimators;500.0;-1;0.8655271834366184;production;catboost;single_laststate
+1;one_hot_max_size;234.0;-1;0.8655271834366184;production;catboost;single_laststate
+1;random_strength;49.55956147902306;-1;0.8655271834366184;production;catboost;single_laststate
+1;scale_pos_weight;11.89832814769362;-1;0.8655271834366184;production;catboost;single_laststate
