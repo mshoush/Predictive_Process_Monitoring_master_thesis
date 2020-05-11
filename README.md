@@ -56,7 +56,7 @@ You need to download below datasets and modify the path in `dataset_confs.py` sc
 
 * `For Example_Inter-case features`: 
                   
-                  cd CatBoost
+                  cd Inter-case_features
                   python experiments_optimize_params.py production single_laststate catboost 1
                   python experiments.py production single_laststate catboost 
                   python experiments_performance.py production single_laststate catboost 1
