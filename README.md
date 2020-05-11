@@ -16,7 +16,7 @@ You need to download below datasets and modify the path in `dataset_confs.py` sc
 
 
 # Reproduce results:
-To run this project, you need to install packages from `requirements.txt` file, and to do so run the below command:                             
+* To run this project, you need to install packages from `requirements.txt` file, and to do so run the below command:                             
 
                   conda create --name env_name --file requirements.txt --yes
                   
