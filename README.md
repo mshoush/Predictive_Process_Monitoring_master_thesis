@@ -1,5 +1,3 @@
-# Predictive_Process_Monitoring_master_thesis
-
 # Improved methods for Predictive Process Monitoring:
 This project is an extension to work done by [irhete/predictive-monitoring-thesis ](https://github.com/irhete/predictive-monitoring-thesis) as a master thesis at the University of Tartu, Estonia. In this thesis, we introduced three different methods to improve the currently existing techniques of outcome-oriented predictive process monitoring. 
 
@@ -28,9 +26,14 @@ To run this project, you need to install packages from `requirements.txt` file, 
                   
 * To reproduce results for each contribution you need to go inside the corresponding folder, and then run the following commands: 
                 
-                  python experiments_optimize_params.py <data set> <bucketing_encoding> <classifier> <nr_iterations>
-                  python experiments.py <data set> <bucketing_encoding> <classifier>
-                  python experiments_performance.py <data set> <bucketing_encoding> <classifier> <nr_iterations>
+                  1. Hyperparameter optimization:
+                                python experiments_optimize_params.py <data set> <bucketing_encoding> <classifier> <nr_iterations>
+                                
+                  2. Training and evaluating final models: 
+                                python experiments.py <data set> <bucketing_encoding> <classifier>
+                                
+                  3. Execution times of final models: 
+                                python experiments_performance.py <data set> <bucketing_encoding> <classifier> <nr_iterations>
 
 * `For Example_CatBoost`: 
                   
