@@ -40,7 +40,7 @@ You need to download below datasets and modify the path in `dataset_confs.py` sc
 
 * `For Example_CatBoost`: 
                   
-                  cd CatBoost
+                  cd ./CatBoost/
                   python experiments_optimize_params.py production single_laststate catboost 1
                   python experiments.py production single_laststate catboost 
                   python experiments_performance.py production single_laststate catboost 1
@@ -48,7 +48,7 @@ You need to download below datasets and modify the path in `dataset_confs.py` sc
                   
  * `For Example_Wavelet`: 
                   
-                  cd Wavelet
+                  cd ./Wavelet/
                   python experiments_optimize_params.py production single_waveletLast catboost 1
                   python experiments.py production single_waveletLast catboost 
                   python experiments_performance.py production single_waveletLast catboost 1
@@ -56,7 +56,7 @@ You need to download below datasets and modify the path in `dataset_confs.py` sc
 
 * `For Example_Inter-case features`: 
                   
-                  cd Inter-case_features
+                  cd ./Inter-case_features/
                   python experiments_optimize_params.py production single_laststate catboost 1
                   python experiments.py production single_laststate catboost 
                   python experiments_performance.py production single_laststate catboost 1
