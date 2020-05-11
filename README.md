@@ -1,20 +1,60 @@
 # Predictive_Process_Monitoring_master_thesis
 
+# Improved methods for Predictive Process Monitoring:
+This project is an extension to work done by [irhete/predictive-monitoring-thesis ](https://github.com/irhete/predictive-monitoring-thesis) as a master thesis at the University of Tartu, Estonia. In this thesis, we introduced three different methods to improve the currently existing techniques of outcome-oriented predictive process monitoring. 
+
+This repository and our contributions are organized as follows:
+* **Contribution 1:** Adding CatBoost mehtod to outcome-orinted PPM techniques. 
+* **Contribution 2:** Adding a new complex sequence encoding on the basis of discrete wavelet transformation and neural networks. 
+* **Contribution 3:** Addding Inter-case features to the experiemnts. 
+
+# Datset: 
+You need to download below datasets and modify the path in `dataset_confs.py` script. 
+
+* [Labeled datasets](https://drive.google.com/drive/folders/1ut9HR5I4Bvo96WcG09Boex_XfC6rJujZ?usp=sharing)
+* [Inter-case features datasets](https://drive.google.com/drive/folders/1E26I981qyMNj1laTNKoCCC_PneGzlT5R?usp=sharing)
 
 
 
 
-
-
-
-# Run This Project:
-To run this project you need to install packages from `requirements.txt` file, to do so run below command:                             
+# Reproduce results:
+To run this project, you need to install packages from `requirements.txt` file, and to do so run the below command:                             
 
                   conda create --name env_name --file requirements.txt --yes
                   
-Above command will create a virtual environment, so you need to activate it afterwards using below command:
+* Above command will create a virtual environment, so you need to activate it afterwards using below command:
 
                   conda activate env_name
+                  
+* To reproduce results for each contribution you need to go inside the corresponding folder, and then run the following commands: 
+                
+                  python experiments_optimize_params.py <data set> <bucketing_encoding> <classifier> <nr_iterations>
+                  python experiments.py <data set> <bucketing_encoding> <classifier>
+                  python experiments_performance.py <data set> <bucketing_encoding> <classifier> <nr_iterations>
+
+* `For Example_CatBoost`: 
+                  
+                  cd CatBoost
+                  python experiments_optimize_params.py production single_laststate catboost 1
+                  python experiments.py production single_laststate catboost 
+                  python experiments_performance.py production single_laststate catboost 1
+                  
+                  
+ * `For Example_Wavelet`: 
+                  
+                  cd Wavelet
+                  python experiments_optimize_params.py production single_waveletLast catboost 1
+                  python experiments.py production single_waveletLast catboost 
+                  python experiments_performance.py production single_waveletLast catboost 1
+                  
+
+* `For Example_Inter-case features`: 
+                  
+                  cd CatBoost
+                  python experiments_optimize_params.py production single_laststate catboost 1
+                  python experiments.py production single_laststate catboost 
+                  python experiments_performance.py production single_laststate catboost 1
+
 
           
 
