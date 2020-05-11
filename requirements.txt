@@ -1,0 +1,9 @@
+pandas==0.25.3
+scikit-learn
+gensim
+hyperopt
+xgboost
+catboost
+keras
+tensorflow
+nltk
