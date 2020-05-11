@@ -26,13 +26,16 @@ You need to download below datasets and modify the path in `dataset_confs.py` sc
                   
 * To reproduce results for each contribution you need to go inside the corresponding folder, and then run the following commands: 
                 
-                  1. Hyperparameter optimization:
+    1. Hyperparameter optimization:
+      
                                 python experiments_optimize_params.py <data set> <bucketing_encoding> <classifier> <nr_iterations>
                                 
-                  2. Training and evaluating final models: 
+    2. Training and evaluating final models: 
+      
                                 python experiments.py <data set> <bucketing_encoding> <classifier>
                                 
-                  3. Execution times of final models: 
+    3. Execution times of final models: 
+      
                                 python experiments_performance.py <data set> <bucketing_encoding> <classifier> <nr_iterations>
 
 * `For Example_CatBoost`: 
