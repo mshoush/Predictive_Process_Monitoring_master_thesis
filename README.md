@@ -8,7 +8,7 @@ This repository and our contributions are organized as follows:
 * **Contribution 2:** Adding a new complex sequence encoding on the basis of discrete wavelet transformation and neural networks. 
 * **Contribution 3:** Addding Inter-case features to the experiemnts. 
 
-# Datset: 
+# Dataset: 
 You need to download below datasets and modify the path in `dataset_confs.py` script. 
 
 * [Labeled datasets](https://drive.google.com/drive/folders/1ut9HR5I4Bvo96WcG09Boex_XfC6rJujZ?usp=sharing)
