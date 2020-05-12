@@ -16,7 +16,7 @@ You need to download below datasets and modify the path in `dataset_confs.py` sc
 
 
 # Reproduce results:
-To run this project, you need to install packages from `requirements.txt` file, and to do so run the below command:                             
+* To run this project, you need to install packages from `requirements.txt` file, and to do so run the below command:                             
 
                   conda create --name env_name --file requirements.txt --yes
                   
@@ -26,18 +26,21 @@ To run this project, you need to install packages from `requirements.txt` file, 
                   
 * To reproduce results for each contribution you need to go inside the corresponding folder, and then run the following commands: 
                 
-                  1. Hyperparameter optimization:
+    1. Hyperparameter optimization:
+      
                                 python experiments_optimize_params.py <data set> <bucketing_encoding> <classifier> <nr_iterations>
                                 
-                  2. Training and evaluating final models: 
+    2. Training and evaluating final models: 
+      
                                 python experiments.py <data set> <bucketing_encoding> <classifier>
                                 
-                  3. Execution times of final models: 
+    3. Execution times of final models: 
+      
                                 python experiments_performance.py <data set> <bucketing_encoding> <classifier> <nr_iterations>
 
 * `For Example_CatBoost`: 
                   
-                  cd CatBoost
+                  cd ./CatBoost/
                   python experiments_optimize_params.py production single_laststate catboost 1
                   python experiments.py production single_laststate catboost 
                   python experiments_performance.py production single_laststate catboost 1
@@ -45,7 +48,7 @@ To run this project, you need to install packages from `requirements.txt` file, 
                   
  * `For Example_Wavelet`: 
                   
-                  cd Wavelet
+                  cd ./Wavelet/
                   python experiments_optimize_params.py production single_waveletLast catboost 1
                   python experiments.py production single_waveletLast catboost 
                   python experiments_performance.py production single_waveletLast catboost 1
@@ -53,7 +56,7 @@ To run this project, you need to install packages from `requirements.txt` file, 
 
 * `For Example_Inter-case features`: 
                   
-                  cd CatBoost
+                  cd ./Inter-case_features/
                   python experiments_optimize_params.py production single_laststate catboost 1
                   python experiments.py production single_laststate catboost 
                   python experiments_performance.py production single_laststate catboost 1
