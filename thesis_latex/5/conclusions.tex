@@ -1,0 +1,30 @@
+% this file is called up by thesis.tex
+% content in this file will be fed into the main document
+
+%: ----------------------- name of chapter  -------------------------
+\chapter{Conclusions and Future work} \label{ch6} % top level followed by section, subsection
+
+
+%: ----------------------- paths to graphics ------------------------
+
+% change according to folder and file names
+\ifpdf
+    \graphicspath{{X/figures/PNG/}{X/figures/PDF/}{X/figures/}}
+\else
+    \graphicspath{{X/figures/EPS/}{X/figures/}}
+\fi
+
+%: ----------------------- contents from here ------------------------
+\section{Conclusion} 
+In this thesis, we introduced three different methods to improve the outcome-oriented predictive process monitoring performance. (\romannumeral 1) A new gradient boosting algorithm that handles categorical features and uses order boosting, i.e. \textit{CatBoost} to the area of outcome-oriented predictive process monitoring; (\romannumeral 2) We proposed a new \textit{complex encoding method} using discrete wavelet transformation and time series encoding in addition to autoencoder neural network; (\romannumeral 3) A new set of \textit{inter-case features} that come from the concurrent execution of different business cases and capture information about workload, demand intensity, and the temporal contextual of business processes. 
+
+We evaluated our proposed methods to a baseline from the current existing predictive monitoring methods w.r.t three different evaluation metrics to quantify the goodness and the badness of our methods.  Results show an improvement in outcome-oriented predictive monitoring methods in terms of prediction accuracy however one of the proposed methods (i.e. wavelet encoding) has a drawback w.r.t time performance as it's time complexity is $O(n^3)$. 
+
+\section{Future work}
+In recent years, the area of outcome-oriented predictive monitoring becomes a critical field for all organizations and companies as they need to improve their business process performance which mainly depends on improving the existing methods of PPM.  Predictive monitoring methods depend on many factors that need more investigation to get an improvement in the outcome-oriented PPM area. (\romannumeral 1) One of the most important factors and related to this thesis is how to encode the original event log into a feature vector using a lossless encoding way to capture all information from the log. For example, how to optimize the wavelet encoding method to be executed in a reasonable amount of time.  (\romannumeral 2) Another factor is related to the event log itself since we considered only in this thesis a structured data, so we need to explore how the proposed methods will perform on unstructured data such as text. (\romannumeral 3) Diving into outcome-oriented problems to build prescriptive models that can help the business system worker with some guidance and decisions to avoid unexpected outcomes during the running of business cases.
+
+
+% ---------------------------------------------------------------------------
+%: ----------------------- end of thesis sub-document ------------------------
+% ---------------------------------------------------------------------------
+

@@ -1,0 +1,50 @@
+% this file is called up by thesis.tex
+% content in this file will be fed into the main document
+
+%: ----------------------- name of chapter  -------------------------
+\chapter{Case Studies} % top level followed by section, subsection
+
+The development of mobile applications that requires data-intensive processing and at the same time that keeps a tolerable interaction with the user, its feasible though the use of MCM.  This chapter describes two Android applications. Zompopo a mobile application that foster the provisioning of context-aware functions from the cloud and CroudSTag that enables the face recognition process from the handset for the creation of social groups in Facebook.
+
+
+%: ----------------------- paths to graphics ------------------------
+
+% change according to folder and file names
+\ifpdf
+    \graphicspath{{X/figures/PNG/}{X/figures/PDF/}{X/figures/}}
+\else
+    \graphicspath{{X/figures/EPS/}{X/figures/}}
+\fi
+
+%: ----------------------- contents from here ------------------------
+
+
+%aqui va lo que hicimos en ELIKO
+
+\input{4/Zompopo}	
+\input{4/CroudSTag}
+
+\section{Related work}
+Lot of literature exists about the accelerometer and how to use it for the recognition of human activities, the most extensive work is the one performed by Bao \& Intille (2004)~\cite{bao2004activity}. In their experiments they used 5 biaxial accelerometers on multiple parts of the body for the recognition of activities such as eating, sitting, reading etc. Several mobile applications that enrich their functionality with the accelerometer are developed, most of them context-aware applications. However, these  application do not make use of cloud services since they use accelerometer for a proactive response in real-time. For example, AAMPL (Accelerometer Augmented Mobile Phone Localization) is a mobile application that claims that localization of the mobiles can get affected slightly as GPS information is not sufficient; therefore the application enhances the localization of the user's context using the accelerometer.
+
+Similarly, SAPM (sleep activity pattern monitoring)~\cite{paper:sapm} is a health care proactive application that makes use of the accelerometer altogether with cloud services to monitor and to study in a remote way the sleep-wake cycle of elderly people staying at nursing homes. SAPM collects and stores the sensors information in a remote server (middleware analogy), later after updating the system with sleep diaries, it sends the information to the cloud for being processed by an algorithm that matches and annotates the sensor data with manual sleep diary information.
+
+Facial recognition technologies~\cite{hall1979computer} have been around for a couple of years and are one of the most promising features for the mobile users. There have been several attempts to integrate the facial recognition capabilities to mobile devices. Some manufactures such as Sony Ericsson incorporated the feature in its model X10~\cite{ericsson:x10} the "Recognizer" application. This application enables the user to take a picture using the camera and recognize people present in the picture. It stores the pictures locally in the device and only recognizes people who are present in the contacts list and have a picture associated. However, it lacked the opportunity to search people in the social networks or take advantage of cloud technologies, and eventually overloads the storage resources of the phone with the pictures taken.
+
+Viewdle~\cite{viewdle} is another promising technology to include cloud technologies and facial recognition in mobile devices. It offers a set of solutions to provide facial recognition capabilities and intends to provide the solutions for both standalone and mobile platforms. Currently only the desktop application in beta version has been released which enables to detect faces in photos and tries to match them with tags in the user's Facebook profile. The pictures have to be stored in the computer and during the recognition process it is possible to create a Facebook album and upload the tagged pictures. Viewdle published in its website a demo of the mobile application which allows detecting people from one picture taken with the camera and having access to his Facebook recent activity and information. Nevertheless, this application has not been released and has some problems. For example, the recognition process runs entirely in the device which might negatively impact the performance of the device in terms of battery usage, processor and time response to the user. In the context of CroudSTag application, the facial recognition service is supported by face.com. face.com only provides web or desktop solutions. Since most of the recognition process is performed on cloud, there is no dearth for resources. Face.com is currently looking for commercial applications which use its face recognition API in order to make incursion in the mobile market. We think CroudSTag may be a possible candidate.
+
+
+\section{Summary}
+%look for the information collected in the mobile monday ;)
+Zompopo is an Android application that makes use of cloud services for extending the capabilities of a generic calendar within the mobile phone. Zompopo fosters the provisioning of context-aware services from the cloud, since it tries utilizing a historical set of data collected by the accelerometer (stored and processed in the cloud) for predicting activities that may help the user for scheduling his or her calendar with the activities that will be performing during the day.
+
+CroudSTag is one such application built for the Android devices. The application takes a set of pictures from the cloud and uses the SaaS of Face.com to recognize faces and people from the pictures. The application then enables the user to send, to each recognized person, an invitation to be part of a social group and it uses Facebook for the social group creation. The social groups thus formed with people of common interests, results in sharing and collaboration relationships among the members. The paper explained the application with detailed architectural and technological choices. The performance analysis of the application shows that the social groups can be formed with significant ease and reasonable performance latencies on the devices.
+
+
+
+
+
+% ---------------------------------------------------------------------------
+%: ----------------------- end of thesis sub-document ------------------------
+% ---------------------------------------------------------------------------
+

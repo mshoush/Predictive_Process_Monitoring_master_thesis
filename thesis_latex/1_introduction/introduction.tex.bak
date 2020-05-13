@@ -1,0 +1,66 @@
+
+% this file is called up by thesis.tex
+% content in this file will be fed into the main document
+
+%: ----------------------- introduction file header -----------------------
+\chapter{Introduction}
+
+% the code below specifies where the figures are stored
+\ifpdf
+    \graphicspath{{1_introduction/figures/PNG/}{1_introduction/figures/PDF/}{1_introduction/figures/}}
+\else
+    \graphicspath{{1_introduction/figures/EPS/}{1_introduction/figures/}}
+\fi
+
+% ----------------------------------------------------------------------
+%: ----------------------- introduction content -----------------------
+% ----------------------------------------------------------------------
+
+
+
+%: ----------------------- HELP: latex document organisation
+% the commands below help you to subdivide and organise your thesis
+%    \chapter{}       = level 1, top level
+%    \section{}       = level 2
+%    \subsection{}    = level 3
+%    \subsubsection{} = level 4
+% note that everything after the percentage sign is hidden from output
+
+
+
+\section{Introduction} % section headings are printed smaller than chapter names
+% intro
+Both cloud computing~\cite{paper:cloudcomputing} and mobile computing domains have advanced rapidly and are the promising technologies for the near future. Cloud computing is a style of computing in which, typically, resources scalable on demand are provided "as a service (aaS)" over the Internet to users who need not have knowledge of, expertise in, or control over the cloud infrastructure that supports them. The provisioning of cloud services can occur at the Infrastructural level (IaaS) or Platform level (PaaS) or at the Software level (SaaS). Cloud computing mainly forwards the utility computing model, where consumers pay on the basis of their usage. Moreover, cloud computing promises the availability of virtually infinite resources.
+
+On the other hand, improvements in mobile devices, on hardware (embedded sensors, memory, power consumption, touchscreen, better ergonomic design, etc.), in software (more numerous and more sophisticated applications due to the release of iPhone~\cite{iphone:platform} and Android~\cite{android:platform} platforms) and in transmission (higher data transmission rates achieved with 3G and 4G technologies), have contributed towards having higher mobile penetration and better services provided to the customers. Now the mobile users can collaborate and share information with significant ease.
+
+Mobiles enter cloud computing domain by trying to access the shared pool of computing resources provided by the cloud on demand. Clouds are looking forward to the mobile domain, having their expectations focused in the idea of data synchronization services. Mobile sync refers to the synchronization of data in the handset with a server and a portal in the cloud. However, Mobile technologies are drawing the attention to the clouds due to the demand of the applications, for processing power, storage space and energy saving. This has led to the appearance of the Mobile Cloud Computing (MCC) domain. Applications benefiting from a Mobile Cloud are related to various domains such as social networks, location based services, context-aware systems etc.
+
+
+\subsection{Motivation}
+The proliferation of mobile devices is fostering the emergence of ubiquitous environments, and thus the development of pervasive and context-aware applications is increasing. Examples include, AAMPL~\cite{paper:aampl}, MetroSense~\cite{paper:metrosense}, Place-Its~\cite{paper:placeits} etc. Context-aware applications are those that utilize the user's context for providing environmental adaptability. These kinds of applications enable user interaction by combining the functionality of a mobile application with a variety of sensors (accelerometer, magnetic field, gravity, etc.) within the handset and with external entities as location information systems (GPS). Sensor's information allows the applications to learn from the user in order to provide better services.  However, the use of sensors in the applications is limited due the lack of resources in the handset for storing and processing the data collected.
+
+Furthermore, a next generation of mobile applications is focusing in the combination of different cloud capabilities from multiple clouds for the creation of powerful mashups that are not tied to cloud specifications, and thus can be migrated easily to another cloud solutions.
+
+
+\subsection{Contributions}
+To counter the problems with the interoperability across multiple clouds, to perform data-intensive processing invocation from the handset and to introduce the platform independence feature for the mobile cloud applications, the following thesis discusses a Mobile Cloud Middleware (MCM). The middleware provides a unique interface for mobile connection and multiple internal interfaces and adapters, which manage the connection and communication between different clouds. The MCM capabilities for managing resource intensive tasks can easily be envisioned in several scenarios. One of them includes the provisioning of context-aware services for processing data collected by the accelerometer with the purpose of creating an intelligent calendar that predicts human activities. Another scenario consist in the formation of a social group by recognizing people in a set of pictures stored in the cloud.
+
+Since, most of the reasonable mobile cloud services require significant time to process the request; it is logical to have asynchronous invocation of the mobile cloud services. Asynchronicity is added to the MCM by using push notification services provided by different mobile application development platforms. Once the MCM prototype was developed, it was extensively analyzed for its performance and the detailed are addressed here. MCM also improves the quality of service (QoS) for mobiles and helps in maintaining soft-real time responses. Moreover, MCM implements an interface with Funambol~\cite{paper:funambol} to monitoring from the mobile the status of the task.
+
+
+\subsection{Outline}
+
+\noindent \textbf{Chapter 2}: discusses the state of the art addressed by this thesis. The chapter first introduces cloud computing technologies along with the cloud services available though the Web for fitting the mobile demand. Later introduces the developments in mobile technologies and how those are taking advantage of the cloud using the synchronization data approach. The chapter concludes by making emphasis in current mobile cloud providers\\
+
+\noindent \textbf{Chapter 3}: explains the problems regarding the combination and the invocation of cloud services from the mobile phone. First it introduces the main problem regarding with cloud interoperability. Second, it covers cloud resource dependency according to the mobile platform. Third, it introduces the problem of invoking data-intensive resources from the handset\\
+
+\noindent \textbf{Chapter 4}: addresses the mobile cloud middleware concept with realization details. The chapter first introduces the concept of pure mobile cloud services. Later, explains how applications can benefit from the cloud invoking the storage and the computational services. Further, introduces the asynchronous notification feature for managing cloud services. it concludes the chapter by explaining how MCM can be integrated with existent solution such as Funambol. \\
+
+\noindent \textbf{Chapter 5}: introduces two applications (Zompopo and CroudSTag) as case of study for MCM. Each application consist of a description, development explanation and performance analysis. First is introduces Zompopo as a context-aware application that can relies in the provisioning of context-aware services from the cloud. Second, it explains CroudSTag as a social application that relies on cloud services for the performed face recognition in a set of pictures stored at the cloud\\
+
+\noindent \textbf{Chapter 6}: provides the conclusion about the findings of the thesis. \\
+
+\noindent \textbf{Chapter 7}: describes the future research directions such the integration with the Mobile Web Services Mediation Framework (MWSMF~\cite{SriramaETAL:MWSMF.07}) and scalability improvements such the re-implementation of the middleware solution using Erlang.\\
+
+

@@ -1,0 +1,64 @@
+\relax 
+\FN@pp@footnotehinttrue 
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Case Studies}{33}{chapter.5}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Zompopo: Mobile Calendar Prediction based on Human Activities Recognition using the Accelerometer and Cloud Services}{33}{section.5.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Zompopo application flow}}{35}{figure.5.1}}
+\newlabel{fig:zompopoFlow}{{5.1}{35}{Zompopo application flow\relax }{figure.5.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Human Activities Recognition Using the Accelerometer and Hadoop Processing Service}{35}{subsection.5.1.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces 3-axis readings for different activities}}{36}{figure.5.2}}
+\newlabel{fig:accelerometer}{{5.2}{36}{3-axis readings for different activities\relax }{figure.5.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Classification algorithm using Hadoop map/reduce}}{37}{figure.5.3}}
+\newlabel{fig:alg}{{5.3}{37}{Classification algorithm using Hadoop map/reduce\relax }{figure.5.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Sequential file procedure}}{38}{figure.5.4}}
+\newlabel{fig:input}{{5.4}{38}{Sequential file procedure\relax }{figure.5.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Segregation of accelerometer data based on x axis}}{38}{figure.5.5}}
+\newlabel{fig:map}{{5.5}{38}{Segregation of accelerometer data based on x axis\relax }{figure.5.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Reduce Function }}{39}{figure.5.6}}
+\newlabel{fig:reduce}{{5.6}{39}{Reduce Function \relax }{figure.5.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Zompopo Performance Model: Asynchronous Service Invocation}{39}{subsection.5.1.2}}
+\newlabel{eqn:mcs:mware:times}{{5.1}{39}{Zompopo Performance Model: Asynchronous Service Invocation\relax }{equation.5.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Mobile cloud service invocation cycle: Activities and timestamps}}{40}{figure.5.7}}
+\newlabel{fig:timestamps}{{5.7}{40}{Mobile cloud service invocation cycle: Activities and timestamps\relax }{figure.5.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Timestamps of the application scenario}}{41}{figure.5.8}}
+\newlabel{fig:AnalysisChart}{{5.8}{41}{Timestamps of the application scenario\relax }{figure.5.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces Mobile Cloud Gallery application scenario}}{42}{figure.5.9}}
+\newlabel{fig:MobileCloudGallery}{{5.9}{42}{Mobile Cloud Gallery application scenario\relax }{figure.5.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}CroudSTag: Social Group Formation with Facial Recognition and Mobile Cloud Services}{42}{section.5.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces Screenshots of the CroudSTag usage scenario}}{43}{figure.5.10}}
+\newlabel{fig:FaceRecognitionScenario}{{5.10}{43}{Screenshots of the CroudSTag usage scenario\relax }{figure.5.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Cloud services employed in the application}{44}{subsection.5.2.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}CroudSTag Performance analysis of the application}{45}{subsection.5.2.2}}
+\newlabel{eqn:mcs:mware: times}{{5.2}{45}{CroudSTag Performance analysis of the application\relax }{equation.5.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces Mobile cloud service invocation cycle: Activities and timestamps}}{46}{figure.5.11}}
+\newlabel{fig:timestampsCroudSTag}{{5.11}{46}{Mobile cloud service invocation cycle: Activities and timestamps\relax }{figure.5.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces Timestamps of the application scenario}}{47}{figure.5.12}}
+\newlabel{fig:AnalysisChartCroudSTag}{{5.12}{47}{Timestamps of the application scenario\relax }{figure.5.12}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Summary}{48}{section.5.3}}
+\FN@pp@footnotehinttrue 
+\@setckpt{4/casestudies}{
+\setcounter{page}{49}
+\setcounter{equation}{2}
+\setcounter{enumi}{0}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{0}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{chapter}{5}
+\setcounter{section}{3}
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{12}
+\setcounter{table}{0}
+\setcounter{pp@next@reset}{1}
+\setcounter{@fnserial}{0}
+\setcounter{NAT@ctr}{0}
+\setcounter{Item}{0}
+\setcounter{Hfootnote}{0}
+\setcounter{section@level}{1}
+}

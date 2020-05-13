@@ -1,0 +1,68 @@
+% this file is called up by thesis.tex
+% content in this file will be fed into the main document
+
+%: ----------------------- name of chapter  -------------------------
+\chapter{Problem Statement} % top level followed by section, subsection
+
+
+Since the establishment of SyncML by the Open Handset Alliance (OHA); the synchronization of data is the adopted approach for supplying cloud resources to the handset. Moreover, there is a mobile cloud depency and a set of mobile restrictions that unables the direct invocation of cloud services from the devices. This chapter highlighted some of the main problems for the consumption of cloud services from the mobile phone.
+
+
+
+%: ----------------------- paths to graphics ------------------------
+
+% change according to folder and file names
+\ifpdf
+    \graphicspath{{X/figures/PNG/}{X/figures/PDF/}{X/figures/}}
+\else
+    \graphicspath{{X/figures/EPS/}{X/figures/}}
+\fi
+
+%: ----------------------- Mobile Cloud Middleware ------------------------
+
+\section{Research Question}
+Recently, there has been growing interest in adapting the cloud computing paradigm for delivering services that requires high demand. Services provided through the Internet are moving to the cloud due the scalability benefits in infrastructure, the ease in the deploying of services without managing the underlying technology (software and hardware) and the pay-as-you-go model that enables reducing costs. Business companies also are migrating to the cloud for leveraging the potential of their internal infrastructure (using the computing power when is needed). Cloud services may be provided from public cloud vendors (Amazon AWS, Google App Engine, Microsft Azure, etc.) or own private cloud implementations (Eucalyptus). Although, Cloud domain is strongly dominated by proprietary solutions (public clouds). Hence, there exist various cloud architectures that may use different styles (SaaS, PaaS and IaaS) for delivering the cloud supplies. Such architectures are accessible through particular implementations, API set, etc, provided by one specific vendor. Therefore cloud interoperability is not possible and development of applications is tied to a specific cloud provider. For example, applications which are developed for consuming services from Amazon must suffer some modifications within the code in order to be compatible with Eucalyptus, even if both shared similar composition. 
+
+Same occurs when mobile technologies tries connecting the cloud (set of tools is required). and in some cases mobile platform may be or not supported by the cloud provider. For example, at the time of writing this thesis, Amazon just released a beta support for Android. Moreover, if a mobile applications needs to contact hybrid cloud services; the development becomes a trick process that might not work in some cases, and if works, the result is an ad-hoc heavy application within the handset that is not able to provide a proper interaction with the user.
+
+Furthermore, the lack of standards cloud interfaces unable the data and application integration of multiple cloud services within a mobile application. Since the establishment of SyncML by the Open Hanset Alliance; mobile technologies are taking advantage from the cloud for the provisioning of cloud services based on data synchronization. However, a next generation of mobile technologies is looking towards the cloud for enriching mobile applications functionality utilizing cloud services such Hadoop, EC2, SaaS, S3 etc. for the processing and storing of large amounts of data. Moreover, mobile applications are focusing in the combination of different cloud capabilities from multiple clouds for the creation of powerful mashups that are not tied to cloud specifications, and thus can be migrated easily to another cloud solutions. Although the direct invocation of those services from the mobile phone is not possible since the handset is holding the request till get a response back from the cloud, This implies that the mobile phone is unable for handle internally both, the managing of multiple cloud requests from one mashup application and the concurrency of several mobile applications that are invoking cloud services.
+
+
+
+\subsection{Mobile Cloud Interoperability}
+The high penetration in mobiles technologies is fostering the ubiquitous consumption of information from the Internet, and thus services which are offered as SaaS from the cloud are extending their solutions for fitting the mobile demand. This can be contemplated since most of the applications which are available from a Web browser also are available in a mobile version. For example, Twitter, Bebo and MySpace provides WAP content for being consumed from the handset. Similarly, some cloud services are attached to the use of special applications that must be installed within the mobile phone for accessing the cloud resources. As an example, Facebook can be mentioned, since provides a mobile application that enables the user retrieving information about his or her social updates. Google Calendar is another services which makes use of generic widget applications within the mobile phone for the synchronization of data (activities) with the cloud. However, not all the cloud services are supported for providing mobile version. For example, face.com provides an API for accessing their face recognition service, but such API is not suitable for deploying within a mobile platform. 
+
+Cloud services in the infrastructure layer (IaaS) can be accessed using the set of tools (API) provided by the cloud vendor. Those tools enables the applications for storing information in buckets (consist of several objects) and for managing instances from the computational service. However, currently just some libraries provides support for accessing the storage service from the mobile device. Since cloud services usually are consumed by the handset using the synchronization protocol, some of those API are also extending their functionality for fitting such requirement. For Instance, jets3t is a library that is use for accessing Amazon S3 and Eucalyptus Walrus. Moreover it implements a synchronization feature that enables to synchronize files or folders in the buckets with the mobile phone. At the same time, typica is a library that enables accessing Amazon EC2 and Eucalyptus service. It implements routines for retrieving information about the instances that are running at the cloud, Although it doesn't provide support for accessing the computational service from the mobile phone.
+
+While some cloud services can be accessed using one of the approaches described above, there is no way of combining such services in a powerful mashup application. Moreover, those approaches unable the interoperability between clouds due are developed for consuming services from a specific cloud architecture.
+
+
+
+\subsection{Mobile Platform Integration with Cloud Resources}
+There is a multiple variety of mobile platforms in the market (Symbian, Windows Mobile, Blackberry, etc). However, since the released of iOS and Android, most of the mobile operating systems are decreasing in popularity, and thus the development set of tools for them is diminished or in some cases  retired from the development community due the extinction and replacement of the mobile platform. (Symbian case).  Most of the cloud vendors provides support for their own mobile OS or for some specific third-party solutions. Moreover, some cloud vendors used to offer compatibility with their cloud services using certain devices and in further versions of the same services that compatibility was removed or avoided. For example, iTunes store (Apple service) a service for purchasing music online; it used to offer synchronization of the songs with Nokia and Palm. Although, current version of iTunes only allows synchronizing the streaming with iPod or iPad.
+
+Mobile platforms that are supported by the cloud vendors are limited to consuming just certain cloud services, Therefore it is not possible to take the complete advantage of all the capabilities of the cloud . For example, jets3t only allows to access Amazon S3 from the handset. In the other hand, open source libraries which were developed initially for accessing cloud services from standalone applications might be adapted for mobile phones. However, some important problems of adapting those set of tools are concerning to the platform restrictions.  Most of the APIs which are available to interact with the public and private clouds are not suitable for directly deploying them into a mobile phone, due to the integration issues with the compiler or other libraries which are required by the cloud API, but are not compatible for mobiles. For example in jclouds API when some dependencies are included within Android, various runtime issues emerge which are not supported by the platform compiler, thus the application gets unable to execute.  Moreover, they tend to get outdated and newer versions cannot be deployed on older applications, due to the deprecated methods.
+
+
+Clearly, mobile platforms are playing a vital role in adopting the cloud as solution for mobile technologies issues concerning storage and processing power. However, the intention of locking cloud services to specific platforms unable innovation of applications in mobile technologies. 
+
+
+
+\subsection{Cloud Services Invocation from the Mobile Device}
+Mobile technologies are accessing services from the cloud using a synchronization approach. Such strategy consist on keeping data consistency between the handset and the cloud; the data can be manage using a portal located at the cloud. However, an innovative type of the mobile applications are trying of using the cloud resources for performing data-intensive processing that may enrich mobile applications with more functionality. Context-aware applications are those that might benefit more from such processing due they collected large amount of data through sensors (accelerometer, magnetic field, etc) that needs to be processed for learning from the user context. Cloud services such Hadoop is considered for delivering context-aware services from the cloud.
+
+However, analyzing large amount of information is time consuming, and thus the invocation of a cloud service from a handset is not proper due the waste of energy required in the request offloading and the waiting for a response back. Moreover, such waiting time is not tolerable for the user perspective and mobile application usability. Therefore, a  mobile cloud invocation must be handle by the mobile as any other local application. Another problem concerning the invocation of cloud services from the mobile is related with concurrency of applications. Since a simple direct invocation requires an immediate response for releasing the handset,  just one task can be performed at the time.
+
+
+
+\subsection{Summary}
+To counter the problems with the interoperability across multiple clouds, to perform data-intensive processing invocation from the handset and to introduce the platform independence feature for the mobile cloud applications, the following thesis discusses a Mobile Cloud Middleware (MCM). The middleware provides a unique interface for mobile connection and multiple internal interfaces and adapters, which manage the connection and communication between different clouds. The MCM capabilities for managing the resource intensive tasks can easily be envisioned in several scenarios which are discussed in further sections as case of study. 
+
+
+
+
+
+% ---------------------------------------------------------------------------
+%: ----------------------- end of thesis sub-document ------------------------
+% ---------------------------------------------------------------------------
+

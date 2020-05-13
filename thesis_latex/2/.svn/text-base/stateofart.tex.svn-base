@@ -1,0 +1,155 @@
+% this file is called up by thesis.tex
+% content in this file will be fed into the main document
+
+\chapter{State of the Art} % top level followed by section, subsection
+
+The state of the art used in the thesis highlighted the advances in the cloud computing domain and the mobile domain.  Cloud computing is changing the style in which services are delivered over the Internet. A cloud service  is able to supply scalability according to the demand, to provide functionality without dealing the underlying technologies that conform the cloud, and to leverage the distributed physical infrastructure for using the cloud as a virtual pool of resources (pay as you need). The consumption of cloud services for mobile devices is focused in the synchronization of data (Mobile sync). However, Most of the cloud services available from the Web are extending to mobile version for fitting the demand of ubiquity access.
+
+The integration of the cloud with mobile technologies has envisioned the Mobile Cloud Computing domain (MCC). This chapter introduces these developments from the literature and addresses the motivation for the research in the MCC domain.
+
+
+% change according to folder and file names
+\ifpdf
+    \graphicspath{{X/figures/PNG/}{X/figures/PDF/}{X/figures/}}
+\else
+    \graphicspath{{X/figures/EPS/}{X/figures/}}
+\fi
+
+% ----------------------- State of the art ------------------------
+
+
+\section{Cloud computing}
+Cloud computing is a style of computing in which, typically, resources scalable on demand are provided "as a service (aaS)" over the Internet to users who need not have knowledge of, expertise in, or control over the cloud infrastructure that supports them. Cloud computing mainly forwards the idea of utility computing along with virtualization~\cite{barham2003xen}. In the utility computing model, consumers pay based on their usage of computing resources, just like the traditional utility services e.g. water, electricity, gas etc. Just like any utility services model cloud computing benefits from economies of scale. On the other hand, virtualization technologies partition hardware and thus provide flexible and scalable computing platforms. Servers in the cloud can be physical machines or virtual machines. A cloud computing platform dynamically provisions, configures, reconfigures, and de-provisions servers as requested.
+
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{2/figures/Cloud/CloudServices.png}
+\caption{Level of abstraction and layers of cloud services}
+\label{fig:cloudApproaches}
+\end{figure}
+
+Cloud services are provided on demand and at different levels. Figure \ref{fig:CloudServices} shows the layers of cloud services, in terms of level of abstraction. The provisioning of services can be at the Infrastructural level (IaaS) or Platform level (PaaS) or at the Software level (SaaS). In the IaaS, commodity computers, distributed across Internet, are used to perform parallel processing, distributed storage, indexing and mining of data. IaaS provides complete control over the operating system and the clients benefit from the computing resources like processing power and storage, e.g. Amazon EC2~\cite{amazon:aws}. Virtualization is the key technology behind realization of these services. PaaS mainly provides hosting environments for other applications. Clients can deploy the domain specific applications on these platforms, e.g. Google App Engine~\cite{google:appengine}. These applications are in turn provided to the users as SaaS. SaaS are generally accessible from web browsers, e.g. Facebook. Web 2.0 is the main technology behind the realization of SaaS. However, the abstraction between the layers is not concrete and several of the examples can be argued for other layers.
+
+While there are several public clouds on the market, Google Apps (Google Mail, Docs, Sites, Calendar, etc), Google App Engine (provides elastic platform for Java and Python applications with some limitations) and Amazon EC2 are probably most known and widely used. Elastic Java Virtual Machine on Google App Engine allows developers to concentrate on creating functionality rather than bother about maintenance and system setup. Such sandboxing, however, places some restrictions on the allowed functionality. Amazon EC2 on the other hand allows full control over virtual machine, starting from the operating system. It is possible to select a suitable operating system, and platform (32 and 64 bit) from many available Amazon Machine Images (AMI) and several possible virtual machines, which differ in CPU power, memory and disk space. This functionality allows to freely select suitable technologies for any particular task. In case of EC2, price for the service depends on machine size, its uptime, and used bandwidth in and out of the cloud.
+
+Moreover, there are free implementations of EC2 compatible cloud infrastructure e.g. Eucalyptus~\cite{provider:eucalyptus}, that help in creating private clouds. Thus the cloud computing applications can initially be developed at the private clouds and later can be scaled to the public clouds. The setup is of great help for the research and academic communities, as the initial expenses of experiments can be reduced by great extent. Our research group is in the process of setting up a scientific computing cloud (SciCloud) on our clusters, using Eucalyptus technology. With this SciCloud \cite{SriramaETAL:SciCloud.10}, students and researchers can efficiently use the already existing resources of university computer networks, in solving computationally intensive scientific, mathematical, and academic problems. The project mainly targets the development of a framework, including models and methods for establishment, proper selection, state management (managing running state and data), auto scaling and interoperability of the private clouds. The preliminary results can be found at the project site %\cite{SciCloud:site}
+
+\subsubsection{Amazon}
+Amazon~\cite{amazon:aws} is a public cloud computing provider that offers services (AWS) based in the IaaS approach. Amazon AWS (Amazon Web Services) is a set of Web Services (WS)~\cite{paper:ws} that relies on the top of the cloud computing infrastructure for delivering services that can be accessed using  REST (Representational State Transfer) and SOAP (Simple Object Access Protocol) protocols. Within the bundle of services provided in the Amazon stack, EC2 (Elastic Compute Cloud) and S3 (Simple Storage Service) can be mentioned since are the most popular and well-known services. Other services have been developed around these basic services such EBS (Amazon Elastic Block Store), AWS Management Console, etc. Moreover, one of the latest services provided by Amazon consist in CloudWatch for monitoring the applications that are running in the cloud.
+
+Amazon services are paid according to the user's consumption (number of requests, amount of bandwidth, etc). However, in February (2011), Amazon just released a free tier account for the developers in order to foster the creation of applications based on their cloud infrastructure. In the context of mobile technologies, Amazon provides support for Android. Although support still in beta version.
+
+\subsubsection{Eucalyptus}
+Eucalyptus is a solution for the implementation of private clouds. It offers an enterprise solution for business in general and a open source version for the open source community. Eucalyptus architecture is based on Amazon, and thus they share similar composition for the provisioning of services. Walrus provides the support for storage (like S3) and Eucalyptus provides the computational service (like EC2). However, applications that are developed for Eucalyptus are not highly compatible with Amazon. Therefore, applications must suffer some changes when is necessary to migrate from one architecture to another.
+
+
+\subsubsection{Google Application Engine}
+The Application Engine contains all the set of services provided by Google. it uses a SaaS approach for delivering services over the Internet. Among the most well-known services we can mention, Google Analytics, Google docs, Picasa, etc. it provides also support for storage (Google for developers).
+
+Android mobile platform is tied to the solutions provided by Google, and thus most of the services released over the Internet were extending for proving a mobile version. As an example, Android set of applications (Calendar, e-mail, contact, etc). can be synchronized easily (Google Calendar, Google sync, etc) if the user has a Google Account.
+
+
+
+\section{Mobile technologies}
+Improvements in mobile devices, on hardware (embedded sensors, memory, power consumption, touchscreen, better ergonomic design, etc.), in software (more numerous and more sophisticated applications due to the release of iPhone and Android platforms) and in transmission (higher data transmission rates achieved with 3G and 4G technologies), have contributed towards having higher mobile penetration and better services provided to the customers. Also, those improvements have enabled the mobiles to become a source of information, to understand the user in multiple ways (interaction, movement, location etc.). Smart phones are rich of a variety of sensors that enable sensing the user environment for providing adaptability in real-time.
+
+Nowadays, a set of defaults sensors is embedded within the smartphones. Most of the sensors are highly integrated with the software and hardware for providing multiple functions related with usability, security, etc. The accelerometer is the most common sensor within the mobile phone that is used for the sensing the acceleration of the device in different axes (generally 3). The accelerometer can be used for providing multiple services, for example, vendors are using the accelerometer as a security mechanism for securing the hard disk when the device experiences a free fall. The study has used the sensor in one of the applications, Zompopo, which is explained in detail in section 5.1. Similarly to accelerometer, the magnetic field sensor can also sense movement. It is able to sense changes in the magnetic field of the objects. Since the magnetic field shows variation that are related with movements, this kind of sensor may be used for collecting precise information such distance, direction etc.
+
+Apart from the sensors, mobile devices also come with other accessories like the built in camera, support for GPS etc. Those hardware is use for collecting information that may be used for performing tasks in real-time. However, some of this information demands high processing, and thus the use of this information is passive from the mobile perspective.
+
+
+\subsection{Mobile platforms}
+Mobile applications are developed for a diversity of mobile platform including Symbian~\cite{harrison2007symbian} (Nokia), Windows Mobile~\cite{windowsmobile:platform} (Microsoft), Blackberry~\cite{blackberry:platform} (Sony Ericsson) etc. Recently, Symbian have been replaced from the Market for Windows Mobile since the popularity of this decrease in the mobile market.
+Since the introduction of iOs (2007) and Android (2008) as mobile platforms for the smartphones; a huge popularity has been growing around these two operating systems as basis for the development of mobile applications. Apple released iOs as platform for their own device (iPhone). Similary, Android was released as open source in the consortium of the Open Handset Alliance. Currently, Android is supported by vendors such as Samsung, Sony Ericsson, HTC, Toshiba, LG among others.
+
+\subsubsection{Android Platform}
+
+Its a mobile platform released by the Open Hanset Alliance that consist in a software stack composed by an operating system, middleware and key applications. The development of software is tied to the use of the Delvik Virtual Machine (Android Runtime) that enables the use of Java as programming language. Most of the libraries which are compatible with a JDK, can be deployed within Android. However, Some of them may present issues concerning compatibility with the compiler and thus, are unable to be executed. For example typica~\cite{typica:API} API presents such integration problems.
+
+Android architecture consists of multiple layers that relies on a Linux kernel as shown in figure~\ref{fig:androidArchitecture}. The application layer includes a set default applications within the operating system such calendar, contacts, etc. Those applications can be synchronized with the cloud using Google sync. The application framework consist in predetermined services for managing device resources as hardware (sensors, screen, etc ), software (alarms, background services)  and the integration with external sources (location information systems, AC2DM notification service, etc).
+Within the set of libraries, Android incorporate those that provide real-time performance. For example a light version of SQLite database is include.
+
+
+\begin{figure}
+\centering
+\includegraphics[width=0.75\textwidth]{2/figures/Android/system-architecture.jpg}
+\caption{Android Architecture}
+\label{fig:androidArchitecture}
+\end{figure}
+
+
+The distribution of applications for Android is through the Android market. Although, applications can be distributed freely over the Internet once they are packed in APK (Android Package Files) files. However, if the application it was not purchased in the Android Market, still it may be installed, but under the risk of acquire Android Malware.
+
+
+\subsubsection{iOS Platform}
+
+its a mobile platform owned by Apple, Inc. that's its deployed for its mobile device (iPhone).  Since its a proprietary technology most of its core functionality altogether with the hardware is not accessible for the developer.  iOS consists of a number of multiple software layers, each layer allows the use of programming frameworks for the development of applications that run on top of the underlying device architecture.
+
+iOS architecture is depicted in figure~\ref{fig:iosArchitecture}. The conception of each layer allows multiple levels of abstractions for dealing with the hardware. The complexity of each layer is related with the lines of code needed for achieve the developer objective in the mobile application. In general, the higher level of layer, the less effort required for building the application.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.4\textwidth]{2/figures/iOS/Iphone_os_architecture.png}
+\caption{iOS Architecture}
+\label{fig:iosArchitecture}
+\end{figure}
+
+Cocoa Toach Layer is the higher layer of the iOs platform that is based in c-objective language, it provides services such Push Notification Service, Game Kit Frameworks, among others. Media Layer provides capabilities for reproducing video, audio altogether with graphics capabilities for animations. The core services layer contains another abstraction the services described in Cocoa Toach and Media Services. The Core OS Layer lies in the bottom position of the iOS stack and, as such, sits directly on top of the device hardware. The layer provides a variety of services including low level networking, access to external accessories and the usual fundamental operating system services such as memory management, file system handling and threads.
+
+The distribution of application is exclusively through the iPhone App Store. A developer that desires publish an applications must submitted first for inspection in the iOS Dev Center. Once, the review is done and the application fits the mandatory requirements requested by Apple, just then the application is published.
+
+
+\section{Mobile Cloud Services}
+
+While pure mobile cloud services are based on data synchronization, there are also other cloud services in each layer of the cloud computing domain (IaaS, PaaS, and SaaS) that might enable the mobiles for increasing their functional capabilities. These services mainly offer processing data-intensive tasks that are high demanding for a handset. Cloud services can be accessed as SaaS using mobiles if the vendor provides WAP content for delivering the service via Web browser. Common mobile SaaS includes those services released by vendor such as Facebook, Google, Apple, etc. The development of mobile applications that involves the use of cloud services in the infrastructure level is limited to the set of tools provided for each specific cloud vendor. Currently, the Google Application Engine and the Apple Cloud are the most prominent cloud providers that enables the consumption of cloud services from the handset, since their cloud solutions are completely integrated for their own mobile platforms (Android and iOS respectively).More detailed description of mobile cloud services in section 4 while describing MCM.
+
+In behalf of keeping open standards in cloud technologies, some open source communities have been developing libraries that enables the communication with multiple clouds. However such libraries are poorly documented and in some cases are not suitable for deploying within the mobile operating system. Among them we can mention the following.
+
+\subsubsection{jets3t}
+jets3t~\cite{jets3t:API} (Java S3 toolkit) is a library developed by James Murty for accessing the simple storage service of Amazon. jets3t can be easily extended for accessing Walrus storage service of Eucalyptus. Latest version of jets3t enables accessing the Google storage service. its provides support connecting S3 using the Android platform.
+
+\subsubsection{jclouds}
+its another open source library that aims the support for accessing multiple clouds (multi-cloud-API). Latest version of jclouds enables connecting with vendor such as Amazon, GoGrid, Azure, vCloud, and Rackspace. jclouds~\cite{jclouds:API} is not compatible with any mobile platform, and thus it can be use only for the development of pure Web applications.
+
+\subsubsection{typica}
+This library is able to access the computational service of Amazon EC2 and Eucalyptus. its recommended by the open source community to use it altogether with jes3t for developing rich applications based on the consumption of cloud services. However, typica API is not providing support for mobile platforms. Hence, such applications may not be achieved from the handset.
+
+\subsubsection{Amazon Navite API}
+Amazon provides a set of Native APIs that can be integrated with the Eclipse environment for the development of applications. Such set of tools provides connectivity with services such EC2, EBS, etc. However, among those set of libraries, just the API for accessing S3 services provides integration with the Android platform.
+
+\subsection{Synchronization in mobile cloud services}
+
+Clouds are looking forward to the mobile domain, having their expectations focused in the idea of data synchronization services. Mobile sync refers to the synchronization of data in the handset with a server and a portal in the cloud (figure). This kind of approach takes advantage of the cloud allowing the centralization of data resources (contacts, e-mail, pictures, etc.) in the storage service, from several sources (social networks, email providers, etc.), for being accessible via SyncML~\cite{book:syncml} (Synchronization Markup Language) protocol, in such a way that empowers the managing of real-time information from the handset. SyncML is a protocol referenced by the OHA for being used as standard to another synchronization data solutions used for specific vendors. Some of the most popular vendors offering synchronization services are Funambol, Mobical.net, rseven.com and Memotoo.com.
+
+Public cloud vendors offer solutions for synchronization based on their own cloud implementations. For Instance, Google sync (Google), MobileMe (Apple), MyPhone (Microsoft) Ovi Sync (Nokia) etc. In some cases, such solutions are inherent for devices such Android and iPhone. Moreover, providers as Apple unable another kind of devices connecting with its synchronization services. Synchronization solutions for private clouds involves the implementation of open source projects, such as Funambol, libsynthesis, Horde, and eGroupWare among others. Funambol is one of the most popular alternatives for synchronization due enables the integration of several existent technologies (SugarCRM, Zimbra, OpenPSA , etc) through the use of connectors that in most cases are developed by open communities.
+
+
+\begin{figure}
+\centering
+\includegraphics[width=0.65\textwidth]{2/figures/Cloud/synchronizationArchitecture.png}
+\caption{Mobile Cloud synchronization architecture}
+\label{fig:cloudApproaches}
+\end{figure}
+
+\subsubsection{Funambol}
+
+Its an open source framework for the synchronization of data between the handset and a private cloud. Funambol enables the synchronization of information, such as contacts, calendar, images and latest versions include a feature for pushing email to the handset. Recently one study performed by Funambol Inc, situated their solution as the most prominent synchronization technology in the market due several platforms can consume their service without being constrained for an specific cloud implementation (multi-platform client support).
+
+The Funambol core architecture (Server core) consist in three layers, the transport layer, the application layer and the framework layer. The main synchronization functionality relies on the framework layer since contains the synchronization engine altogether with the implementation of SyncML that enables the handset connecting to the sync service. The application layer handles the SyncML messages for being processed. The transportation layer receives messages delivered by protocols, such as HTPP~\cite{protocol:smtp}, SMTP~\cite{book:syncml}, etc. (General architecture is showed in figure)
+
+The architecture layer enables Funambol for connecting with other technologies using connectors. Such interfaces allow the pushing of data for synchronization.
+
+
+\begin{figure}
+\centering
+\includegraphics[width=0.65\textwidth]{2/figures/Cloud/funambolArchitecture.png}
+\caption{Funambol Architecture}
+\label{fig:funambolArchitecture}
+\end{figure}
+
+
+
+% ---------------------------------------------------------------------------
+% ----------------------- end of thesis sub-document ------------------------
+% --------------------------------------------------------------------------- 

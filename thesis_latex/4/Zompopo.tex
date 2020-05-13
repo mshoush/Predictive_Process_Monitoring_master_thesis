@@ -1,0 +1,112 @@
+% this file is called up by thesis.tex
+% content in this file will be fed into the main document
+
+
+\section{Zompopo: Mobile Calendar Prediction based on Human Activities Recognition using the Accelerometer and Cloud Services}
+
+
+Lately, mobile devices have become an indispensable tools in everyday life due enables the ubiquity access for storing user's information (contacts, agenda etc.) and for executing low demanding computational tasks (calendar, text editor etc.). Moreover, handsets are too attached to the user that may be used for capturing his or her context for enhancing the mobile applications with proactive behavior. For instance, the light sensor within the smartphones increases or decreases the brightness in the screen depending in the environmental changes with the purpose of saving energy. Services which are used often such a mobile calendar can enrich monitoring the way in which the carrier behaves.
+
+A calendar service for mobiles can be provided locally within the handset as widget application (e.g. Android calendar etc) or externally as mobile cloud service using SyncML (e.g. Google Calendar, Funambol etc), the difference between them relies in the fact that using an external source multiple handsets can be synchronized with the cloud, meanwhile the local source is only useful for one individual user. Zompopo makes use of the second approach since it uses cloud services (Hadoop) for processing the data gathered by the accelerometer. Zompopo is an application that tries to extend the capabilities of a generic calendar adding a feature that makes use of the accelerometer sensor for predicting the activities which the user will perform during the day based on the sensing of previous week's activities. Since the accuracy of the prediction depends on a set of data collected in advance, the use of the Zompopo application is restricted to collecting information one week before the activation of the prediction feature. The following description assumes that the information was already collected.
+
+While Zompopo is executing in the handset background; the data from the accelerometer is gathered and stored in a SQLite database (the accelerometer analysis is discussed in detail in section 3). By default the accelerometer is always sensing environmental changes that is appended to the database file and then offloaded from the mobile to the cloud storage once per day (23:00 pm). The file is uploaded though MCM (Mobile Cloud Middleware) to the cloud with an unique Id that consist in the date plus the prefix zompopo. For example: The offloading of today was stored as "09-05-2011-zompopo". At the beginning of each day (generally 7:00 am), Zompopo sends a request to MCM for obtaining the set of activities to be included in the calendar. Since MCM implements an asynchronous notification feature for decoupling the handset from the mobile cloud services; the hadoop task for analyzing all the set of historical files is delegated to MCM, releasing the mobile from the activity. The progress of the task is monitored by MCM, which informs the user through a notification message when the task is finished along with the information about its final result (refer to figure~\ref{fig:zompopoFlow}). MCM is discussed in detail in section 4.
+
+Once the handset is notified about the results, Zompopo shows a screen with the list of suggested activities (hour + name of the activity) that could be included in the daily calendar. Since Zompopo was developed for Android; the activities are created using the default calendar application which comes with the OS. The android calendar allows to use SyncML for the synchronization with Google calendar service, and thus changes are replicated to the cloud calendar service automatically. However, the creation of activities is also possible from MCM as is able to access Google cloud services; therefore Zompopo is not tied to the mobile platform and can be easily extended.
+
+
+\begin{figure}
+\centering
+\includegraphics[width=0.75\textwidth]{4/figures/Zompopo/zompopoFlow.png}
+\caption{Zompopo application flow}
+\label{fig:zompopoFlow}
+\end{figure}
+
+\subsection{Human Activities Recognition Using the Accelerometer and Hadoop Processing Service}
+Nowadays mobile devices are equipped with a variety of sensors (GPS, magnetic field, etc) that enrich the mobile applications with location awareness and sensing capabilities. Those advances enable fitting contextual requirements for improving the quality of service in the applications as it allows adapting the interaction between the handset and the user in real-time. For example, a sensor such as the accelerometer is used for sensing how the user is holding the handset, and thus changing the position of the screen as a result. The accelerometer is a sensing element that measures the acceleration associated with the positioning of a weight in which it has being embedded (device). Depending on the number of axes, it can gather the acceleration information from multiple directions. Generally a triaxial accelerometer is the most common in mobiles from vendors such as HTC, Samsung, Nokia etc. Therefore, acceleration can be sensed on three axes, forward/backward, left/right and up/down. For example: in the case of a runner, up/down is measure as the crouching when is warming up before starting to run, forward/backward is related with speeding up and slowing down,  and left/right involves making turns while he is running.
+
+While the accelerometer is able to track information for the recognition of multiple human activities (walking, running, etc) for an immediate response, each activity is differentiated according to the behavior of the data collected by the accelerometer as shown in figure~\ref{fig:accelerometer}. In the context of Zompopo it can be used altogether with cloud services for the prediction of repetitive activities based on a historical set of data. The accelerometer provides information across time related with acceleration along x axis, acceleration along y axis and acceleration along z axis. This information may be used for the identification and classification of certain patterns which are defined in the Zompopo criteria as; standing, walking and running. However, for performing such analysis a classification algorithm using Hadoop is used, which is shown in figure~\ref{fig:alg}. Hadoop is a framework that provides support for the analysis of data-intensive distributed applications (thousands of nodes) within the cloud. The algorithm applies map/reduce for matching the patterns described above, but since the actual aim of the Zompopo is the invocation of  data-intensive processing services from the cloud, a basic algorithm is introduced. This algorithm was implemented using Hadoop 0.20 and Java as programming language.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{4/figures/Zompopo/accelerometer.png}
+\caption{3-axis readings for different activities}
+\label{fig:accelerometer}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.55\textwidth]{4/figures/Zompopo/alg.png}
+\caption{Classification algorithm using Hadoop map/reduce}
+\label{fig:alg}
+\end{figure}
+
+The MapReduce algorithm consists of two basic steps, the Map and the Reduce functions. The Map function takes one set of key value pairs and maps them to intermediate key pairs. The intermediate key pairs are sorted and grouped together by the framework and passed to the reduce function. The Reduce function takes the intermediate key pairs and produces the output. The input process is showed in figure~\ref{fig:input} and uses a CSV file to start the algorithm. Each line within the file contains the following information \textless index, time, x, y, z\textgreater, where time is measured in hours, x, y and z are the 3 axis measured by the accelerometer. Those data is mapped individually to one key value with the following structure \textless time, [x, y, z] \textgreater to produce one Sequential File that is the input for the MapReduce process.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.55\textwidth]{4/figures/Zompopo/input.png}
+\caption{Sequential file procedure}
+\label{fig:input}
+\end{figure}
+
+The Map function takes each key \textless time, [x, y, z]\textgreater from the Sequential File and creates one temporary key \textless time, x\textgreater (figure~\ref{fig:map}). The value of x is considered more representative than y and z since x measures the change of position when person is moving forward or backward and the prediction is based on the idea of movements that involves the carrier locomotion from one place to another. Thus, the recognition is based on x axis. In future improvements of the algorithm the values y and z will be considered to produce more accurate results.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.55\textwidth]{4/figures/Zompopo/map.png}
+\caption{Segregation of accelerometer data based on x axis}
+\label{fig:map}
+\end{figure}
+
+
+Later, the Reduce function receives the temporary keys grouped and sorted by time. Each key represents one set of x values and each key is processed by one Reducer. Two statistical measures, the mean and the standard deviation are used for analyzing the data, and thus determining whether the user is moving or not. The standard deviation indicates how the data is spread out over a range of values. Based on figure~\ref{fig:accelerometer} the more spread out the values are the more the user moves and in the opposite way the more the values are close to each other the less the user is moving. The Reduce function (figure~\ref{fig:reduce}) calculates the two statistical measures and uses the standard deviation to determine if the user is moving or not for the given set of values. One threshold value for the standard deviation is defined with a value of 1 for this experiment. If the standard deviation is below the threshold values the algorithm infers that the user was not moving. If the standard deviation is greater than the threshold value it means the data is spread enough to infer that the user was moving by the time the data was measured. The Reduce produces the output in CSV file with information such \textless time during the day, Accelerometer Measure, Standard Deviation, Action\textgreater, where accelerometer Measure is the mean value of the x values received by the Reducer and Action is the activity inferred by the algorithm.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.55\textwidth]{4/figures/Zompopo/reduce.png}
+\caption{Reduce function }
+\label{fig:reduce}
+\end{figure}
+
+
+\subsection{Zompopo Performance Model: Asynchronous Service Invocation}
+
+On the basis of the functional Zompopo prototype, the application was tested extensively for understanding its interaction performance with the user. The performance model and the analysis are addressed here. Figure~\ref{fig:timestamps} shows the sequence of activities that are performed during the execution of the application. Here the total application duration i.e. the total mobile cloud service invocation time, is:
+
+\begin{equation}
+T_{{mcs}} \cong  T_{tr} + T_m + \Delta T_m + \sum_{i=1}^n (T_{{te}_i} + T_{c_i}) + T_{pn} + T_{sync}  \label{eqn:mcs:mware:times}
+\end{equation}
+
+
+Where, $T_{tr}$ is the transmission time taken across the radio link for the invocation between the mobile phone and the MCM. The value includes the time taken to transmit the request to the cloud and the time taken to send the response back to the mobile. Apart from these values, several parameters also affect the transmission delays like the TCP packet loss, TCP acknowledgements, TCP congestion control etc. So a true estimate of the transmission delays is not always possible. Alternatively, one can take the values several times and can consider the mean values for the analysis. $T_m$ is the time taken to process the request at the middleware. $\Delta T_m$ is the minute extra latency added to the performance of the MCM, as the mobile is immediately notified with the acknowledgement. $T_{te}$ is the transmission time across the Internet/Ethernet for the invocation between the middleware and the cloud. $T_c$ is the time taken to process the actual service at the cloud. This process is repeated several times in the Zompopo application, as it is contacting different clouds like Eucalyptus, Google and Amazon. Hence the sigma is considered in the equation.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.65\textwidth]{4/figures/Zompopo/timestamps.png}
+\caption{Mobile cloud service invocation cycle: Activities and timestamps}
+\label{fig:timestamps}
+\end{figure}
+
+Similarly, $T_{pn}$ represents the push notification time, which is the time taken to send the response of the mobile cloud service to the device via the AC2DM. Once the notification is received by the mobile phone the activities are created locally in a generic calendar. Since the information calendar is an inherent Mobile sync feature for Android; an extra time is introduced, $T_{sync}$ is the time in which the handset synchronizes the data with the cloud service (Google Calendar) though SyncML protocol. While $T_{mcs}$ may seem a bit higher, the phone is rather free to continue with its tasks, so not much load on it. This is possible only due to the support for push notifications at the MCM. The mobile phone just sends the request and gets the acknowledgement back. Actual response from the cloud is sent to the mobile asynchronously. Thus the delay perceived at the mobile rather stays constant however big the $T_{mcs}$ may be. $\cong$ is considered in the equation as there are also other timestamps involved, like the client processing at the mobile phone. However, these values will be quite small and cannot be calculated exactly.
+
+To analyze the performance of the Zompopo application, Eucalyptus Walrus storage services are used for saving the information collected by the accelerometer. A historical set consisting in one week of accelerometer data (one file per day) was stored in a Walrus bucket (objects are stored in buckets). HTC desire phone, with a 5 megapixel color camera with auto focus and flash was considered for the analysis. It has a CPU speed of 1GHz, 576 MB of RAM and storage that can be extended up to 32GB. The application is developed based on the Android platform, compatible with Android 2.2 API or higher. Wifi connection was used to connect the mobile to the middleware. So, test cases were taken in a network with an upload rate of $\approx$ 1409 kbps and download rate of $\approx$ 3692 kbps, respectively. However, as mentioned already, estimating the true values of transmission capabilities achieved at a particular instance of time is not trivial. To counter the problem, we have taken the time stamps several times (5 times), across different parts of the day and the mean values are considered for the analysis.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.65\textwidth]{4/figures/Zompopo/AnalysisChart.png}
+\caption{Timestamps of the application scenario}
+\label{fig:AnalysisChart}
+\end{figure}
+
+The timestamps are shown in figure~\ref{fig:AnalysisChart}. The value of $T_{tr}$ + $\Delta T_m$ is quite short ($<$ 870 msec), which is acceptable from the user perspective. So, the user has the capability to start more data intensive tasks right after the last one or go with other general tasks, while the cloud services are being processed by the MCM. The total time taken for handling the cloud services at MCM, $T_{Cloud}$ (~$\sum_{i=1}^n (T_{{te}_i} + T_{c_i})$~), is also logical and higher as expected ($\approx$100 sec). The $T_{pn}$ varies depending on current traffic of the C2DM service and has an average of $\approx$6 seconds.
+
+
+
+%look for the information collected in the mobile monday ;)
+
+
+
+% ---------------------------------------------------------------------------
+%: ----------------------- end of thesis sub-document ------------------------
+% ---------------------------------------------------------------------------
+

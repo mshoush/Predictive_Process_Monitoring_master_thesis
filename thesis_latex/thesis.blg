@@ -1,0 +1,79 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis.aux
+A level-1 auxiliary file: title_page/stardard_page.aux
+A level-1 auxiliary file: 0_frontmatter/abstract.aux
+A level-1 auxiliary file: 0_frontmatter/acknowledgement.aux
+A level-1 auxiliary file: 1_introduction/introduction.aux
+A level-1 auxiliary file: 2/stateofart.aux
+A level-1 auxiliary file: 3/researchquestion.aux
+A level-1 auxiliary file: 3/contributions.aux
+A level-1 auxiliary file: 4/casestudies.aux
+A level-1 auxiliary file: 5/conclusions.aux
+The style file: elsarticle-num.bst
+Database file #1: thesis.bib
+Repeated entry---line 263 of file thesis.bib
+ : @inproceedings{maggi2014predictive
+ :                                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 282 of file thesis.bib
+ : @inproceedings{schwegmann2013method
+ :                                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 290 of file thesis.bib
+ : @inproceedings{prokhorenkova2018catboost
+ :                                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 378 of file thesis.bib
+ : @article{senderovich2019knowledge
+ :                                  ,
+I'm skipping whatever remains of this entry
+You're missing a field name---line 401 of file thesis.bib
+ :  
+ :  %note = {Accessed: 2010-09-30}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--empty pages in santos2016literature
+Warning--empty journal in cudredata
+You've used 49 entries,
+            2937 wiz_defined-function locations,
+            939 strings with 14002 characters,
+and the built_in function-call counts, 15856 in all, are:
+= -- 1463
+> -- 514
+< -- 20
++ -- 204
+- -- 155
+* -- 981
+:= -- 2034
+add.period$ -- 49
+call.type$ -- 49
+change.case$ -- 44
+chr.to.int$ -- 0
+cite$ -- 51
+duplicate$ -- 560
+empty$ -- 1852
+format.name$ -- 194
+if$ -- 4189
+int.to.chr$ -- 0
+int.to.str$ -- 49
+missing$ -- 51
+newline$ -- 155
+num.names$ -- 48
+pop$ -- 384
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1114
+stack$ -- 0
+substring$ -- 922
+swap$ -- 162
+text.length$ -- 20
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 2
+while$ -- 133
+width$ -- 51
+write$ -- 405
+(There were 5 error messages)

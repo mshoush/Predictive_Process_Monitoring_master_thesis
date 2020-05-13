@@ -1,0 +1,89 @@
+\select@language {english}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Process mining four main components \cite {dumas2013fundamentals}\relax }}{3}{figure.caption.4}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Event log}}{4}{figure.caption.5}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Event log attributes\relax }}{5}{figure.caption.6}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Predictive process monitoring workflow}}{6}{figure.caption.7}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Complete and incomplete trace}}{7}{figure.caption.8}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Machine learning workflow}}{12}{figure.caption.9}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Confusion matrix:}}{14}{figure.caption.10}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces ROC curve}}{15}{figure.caption.11}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Detailed Predictive process monitoring workflow}}{23}{figure.caption.12}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Encoding methods and trace abstraction}}{26}{figure.caption.13}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Taxonomy of methods for outcome-oriented PPM}}{27}{figure.caption.14}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces CatBoost vs XGBoost vs LGBM}}{30}{figure.caption.15}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Categorical handling in CatBoost}}{32}{figure.caption.16}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces CatBoost with sequence encoding.\relax }}{33}{figure.caption.17}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Wavelet complex Sequence encoding}}{33}{figure.caption.18}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Discrete wavelet transformation (DWT)}}{35}{figure.caption.19}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Wavelet encoding method taxonomy}}{37}{figure.caption.20}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Inter-case features}}{38}{figure.caption.21}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Predictive process monitoring methods}}{41}{figure.caption.22}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Data splitting\relax }}{44}{figure.caption.23}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces CatBoost experiments}}{47}{figure.caption.24}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Comparison of all classification algorithms using the Nemenyi test}}{48}{figure.caption.25}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Comparison of all bucketing and encoding methods with CatBoost}}{50}{figure.caption.26}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Comparison between CatBoost and XGBoost on all event logs\relax }}{51}{figure.caption.27}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Comparison between CatBoost and XGBoost on all event logs (\textit {continued})\relax }}{52}{figure.caption.28}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Comparison between CatBoost and XGBoost on all event logs (\textit {continued})\relax }}{53}{figure.caption.29}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Wavelet plus CatBoost outcome-oriented PPM experiments\relax }}{54}{figure.caption.30}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Critical difference diagram wavelet plus CatBoost}}{55}{figure.caption.31}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Critical difference diagram for all bucketing and encoding methods Wavelet plus CatBoost}}{57}{figure.caption.32}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Comparing XGBoost before and after adding wavelet encoding on all event logs.\relax }}{58}{figure.caption.33}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Comparing XGBoost before and after adding wavelet encoding on all event logs (\textit {continued})\relax }}{59}{figure.caption.34}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Comparing XGBoost before and after adding wavelet encoding on all event logs (\textit {continued})\relax }}{60}{figure.caption.35}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Inter-case features}}{61}{figure.caption.36}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Comparison of all classification algorithms using the Nemenyi test}}{63}{figure.caption.37}
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Comparing RF before and after adding Inter-case features on all event logs\relax }}{65}{figure.caption.38}
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Comparing RF before and after adding Inter-case features on all event logs (\textit {continued}).\relax }}{66}{figure.caption.39}
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Comparing RF before and after adding Inter-case features on all event logs (\textit {continued})\relax }}{67}{figure.caption.40}
+\contentsline {figure}{\numberline {5.20}{\ignorespaces SHAP force plot product (false outcome)}}{68}{figure.caption.41}
+\contentsline {figure}{\numberline {5.21}{\ignorespaces SHAP force plot product (true outcome)}}{69}{figure.caption.42}
+\contentsline {figure}{\numberline {5.22}{\ignorespaces SHAP force plot product (true outcome)}}{69}{figure.caption.43}
+\contentsline {figure}{\numberline {5.23}{\ignorespaces SHAP density plot product}}{70}{figure.caption.44}
+\contentsline {figure}{\numberline {5.24}{\ignorespaces SHAP dependence plots}}{71}{figure.caption.45}
+\contentsline {figure}{\numberline {5.25}{\ignorespaces Execution time comparison (offline)}}{72}{figure.caption.46}
+\contentsline {figure}{\numberline {5.26}{\ignorespaces Execution time comparison (offline)}}{73}{figure.caption.47}
+\contentsline {figure}{\numberline {5.27}{\ignorespaces Execution time comparison (online)}}{73}{figure.caption.48}
+\contentsline {figure}{\numberline {5.28}{\ignorespaces Execution time before and after adding the wavelet encoding method (training) on Production event log\relax }}{75}{figure.caption.49}
+\contentsline {figure}{\numberline {5.29}{\ignorespaces Execution time before and after adding the wavelet encoding method (online) on Production event log\relax }}{77}{figure.caption.50}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Comparison between CatBoost and Logit on all event logs\relax }}{88}{figure.caption.54}
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Comparison between CatBoost and Logit on all event logs \textit {(continued)}\relax }}{89}{figure.caption.55}
+\contentsline {figure}{\numberline {B.3}{\ignorespaces Comparison between CatBoost and Logit on all event logs \textit {(continued)}\relax }}{90}{figure.caption.56}
+\contentsline {figure}{\numberline {B.4}{\ignorespaces Comparison between CatBoost and RF on all event logs\relax }}{91}{figure.caption.57}
+\contentsline {figure}{\numberline {B.5}{\ignorespaces Comparison between CatBoost and RF on all event logs \textit {(continued)}.\relax }}{92}{figure.caption.58}
+\contentsline {figure}{\numberline {B.6}{\ignorespaces Comparison between CatBoost and RF on all event logs \textit {(continued)}.\relax }}{93}{figure.caption.59}
+\contentsline {figure}{\numberline {B.7}{\ignorespaces Comparison between CatBoost and SVM on all event logs\relax }}{94}{figure.caption.60}
+\contentsline {figure}{\numberline {B.8}{\ignorespaces Comparison between CatBoost and SVM on all event logs \textit {(continued)}\relax }}{95}{figure.caption.61}
+\contentsline {figure}{\numberline {B.9}{\ignorespaces Comparison between CatBoost and SVM on all event logs \textit {(continued)}\relax }}{96}{figure.caption.62}
+\contentsline {figure}{\numberline {B.10}{\ignorespaces Comparison of CatBoost before and after adding Wavelet encoding\relax }}{105}{figure.caption.63}
+\contentsline {figure}{\numberline {B.11}{\ignorespaces Comparison of CatBoost before and after adding Wavelet encoding \textit {(continued)}\relax }}{106}{figure.caption.64}
+\contentsline {figure}{\numberline {B.12}{\ignorespaces Comparison of CatBoost before and after adding Wavelet encoding \textit {(continued)}\relax }}{107}{figure.caption.65}
+\contentsline {figure}{\numberline {B.13}{\ignorespaces Comparison of LR before and after adding Wavelet encoding\relax }}{108}{figure.caption.66}
+\contentsline {figure}{\numberline {B.14}{\ignorespaces Comparison of LR before and after adding Wavelet encoding \textit {(continued)}\relax }}{109}{figure.caption.67}
+\contentsline {figure}{\numberline {B.15}{\ignorespaces Comparison of LR before and after adding Wavelet encoding \textit {(continued)}\relax }}{110}{figure.caption.68}
+\contentsline {figure}{\numberline {B.16}{\ignorespaces Comparison of RF before and after adding Wavelet encoding\relax }}{111}{figure.caption.69}
+\contentsline {figure}{\numberline {B.17}{\ignorespaces Comparison of RF before and after adding Wavelet encoding \textit {(continued)}\relax }}{112}{figure.caption.70}
+\contentsline {figure}{\numberline {B.18}{\ignorespaces Comparison of RF before and after adding Wavelet encoding \textit {(continued)}\relax }}{113}{figure.caption.71}
+\contentsline {figure}{\numberline {B.19}{\ignorespaces Comparison of SVM before and after adding Wavelet encoding\relax }}{114}{figure.caption.72}
+\contentsline {figure}{\numberline {B.20}{\ignorespaces Comparison of SVM before and after adding Wavelet encoding \textit {(continued)}\relax }}{115}{figure.caption.73}
+\contentsline {figure}{\numberline {B.21}{\ignorespaces Comparison of SVM before and after adding Wavelet encoding \textit {(continued)}\relax }}{116}{figure.caption.74}
+\contentsline {figure}{\numberline {B.22}{\ignorespaces Comparing CatBoost before and after adding Inter-case features on all event logs\relax }}{123}{figure.caption.75}
+\contentsline {figure}{\numberline {B.23}{\ignorespaces Comparing CatBoost before and after adding Inter-case features on all event logs (\textit {continued}).\relax }}{124}{figure.caption.76}
+\contentsline {figure}{\numberline {B.24}{\ignorespaces Comparing CatBoost before and after adding Inter-case features on all event logs (\textit {continued})\relax }}{125}{figure.caption.77}
+\contentsline {figure}{\numberline {B.25}{\ignorespaces Comparing XGBoost before and after adding Inter-case features on all event logs\relax }}{128}{figure.caption.78}
+\contentsline {figure}{\numberline {B.26}{\ignorespaces Comparing XGBoost before and after adding Inter-case features on all event logs (\textit {continued}).\relax }}{129}{figure.caption.79}
+\contentsline {figure}{\numberline {B.27}{\ignorespaces Comparing XGBoost before and after adding Inter-case features on all event logs (\textit {continued})\relax }}{130}{figure.caption.80}
+\contentsline {figure}{\numberline {B.28}{\ignorespaces Comparing Logit before and after adding Inter-case features on all event logs\relax }}{131}{figure.caption.81}
+\contentsline {figure}{\numberline {B.29}{\ignorespaces Comparing Logit before and after adding Inter-case features on all event logs (\textit {continued}).\relax }}{132}{figure.caption.82}
+\contentsline {figure}{\numberline {B.30}{\ignorespaces Comparing Logit before and after adding Inter-case features on all event logs (\textit {continued})\relax }}{133}{figure.caption.83}
+\contentsline {figure}{\numberline {B.31}{\ignorespaces Comparing SVM before and after adding Inter-case features on all event logs\relax }}{134}{figure.caption.84}
+\contentsline {figure}{\numberline {B.32}{\ignorespaces Comparing SVM before and after adding Inter-case features on all event logs (\textit {continued}).\relax }}{135}{figure.caption.85}
+\contentsline {figure}{\numberline {B.33}{\ignorespaces Comparing SVM before and after adding Inter-case features on all event logs (\textit {continued})\relax }}{136}{figure.caption.86}

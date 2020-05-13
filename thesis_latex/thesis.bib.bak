@@ -1,0 +1,48 @@
+% This file was created with JabRef 2.6.
+% Encoding: Cp1257
+
+@ARTICLE{bao2004activity,
+  author = {Bao, L. and Intille, S.S.},
+  title = {Activity recognition from user-annotated acceleration data},
+  journal = {Pervasive Computing},
+  year = {2004},
+  pages = {1--17},
+  owner = {Huber_Flores},
+  publisher = {Springer},
+  timestamp = {2011.05.18}
+}
+
+@INPROCEEDINGS{paper:mcm,
+  author = {H. Flores and S. N. Srirama and C. Paniagua},
+  title = {{A Generic Middleware Framework for Handling Process Intensive Hybrid
+	Cloud Services from Mobiles}},
+  booktitle = {The 9th International Conference on Advances in Mobile Computing
+	\& Multimedia (MoMM-2011)},
+  year = {2011},
+  pages = {87-95},
+  publisher = {ACM},
+  owner = {Huber_Flores},
+  timestamp = {2011.10.06}
+}
+
+@INPROCEEDINGS{SriramaETAL:MWSP.06,
+  author = {Satish Narayana Srirama and Matthias Jarke and Wolfgang Prinz},
+  title = {Mobile Web Service provisioning},
+  booktitle = {AICT-ICIW '06: Advanced Int. Conf. on Telecommunications and Int.
+	Conf. on Internet and Web Applications and Services},
+  year = {2006},
+  pages = {120},
+  publisher = {IEEE Computer Society},
+  isbn = {0-7695-2522-9},
+  owner = {srirama},
+  timestamp = {2011.02.13}
+}
+
+@comment{jabref-meta: selector_publisher:}
+
+@comment{jabref-meta: selector_author:}
+
+@comment{jabref-meta: selector_journal:}
+
+@comment{jabref-meta: selector_keywords:}
+

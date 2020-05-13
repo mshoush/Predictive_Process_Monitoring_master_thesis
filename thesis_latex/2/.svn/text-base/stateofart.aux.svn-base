@@ -1,0 +1,57 @@
+\relax 
+\FN@pp@footnotehinttrue 
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}State of the Art}{5}{chapter.2}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Cloud computing}{5}{section.2.1}}
+\citation{Amazon:EC2}
+\citation{Google:AppEngine:Java}
+\citation{Google:AppEngine:Java}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Level of abstraction and layers of cloud services}}{6}{figure.2.1}}
+\newlabel{fig:cloudApproaches}{{2.1}{6}{Level of abstraction and layers of cloud services\relax }{figure.2.1}{}}
+\citation{Euca:site}
+\citation{SriramaETAL:SciCloud.10}
+\citation{iphone:platform}
+\citation{android:platform}
+\@writefile{brf}{\backcite{SriramaETAL:SciCloud.10}{{7}{2.1}{figure.2.1}}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Mobile technologies}{7}{section.2.2}}
+\@writefile{brf}{\backcite{iphone:platform}{{8}{2.2}{section.2.2}}}
+\@writefile{brf}{\backcite{android:platform}{{8}{2.2}{section.2.2}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Mobile platforms}{8}{subsection.2.2.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Android Architecture}}{9}{figure.2.2}}
+\newlabel{fig:cloudApproaches}{{2.2}{9}{Android Architecture\relax }{figure.2.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1.1}Android Platform}{9}{subsubsection.2.2.1.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces iOS Architecture}}{10}{figure.2.3}}
+\newlabel{fig:cloudApproaches}{{2.3}{10}{iOS Architecture\relax }{figure.2.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1.2}iOS Platform}{10}{subsubsection.2.2.1.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Mobile Cloud Services}{11}{section.2.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Mobile Cloud synchronization architecture}}{12}{figure.2.4}}
+\newlabel{fig:cloudApproaches}{{2.4}{12}{Mobile Cloud synchronization architecture\relax }{figure.2.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Synchronization in mobile cloud services}{12}{subsection.2.3.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.1.1}Funambol}{12}{subsubsection.2.3.1.1}}
+\FN@pp@footnotehinttrue 
+\@setckpt{2/stateofart}{
+\setcounter{page}{13}
+\setcounter{equation}{0}
+\setcounter{enumi}{0}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{0}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{chapter}{2}
+\setcounter{section}{3}
+\setcounter{subsection}{1}
+\setcounter{subsubsection}{1}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{4}
+\setcounter{table}{0}
+\setcounter{pp@next@reset}{1}
+\setcounter{@fnserial}{0}
+\setcounter{NAT@ctr}{0}
+\setcounter{Item}{0}
+\setcounter{Hfootnote}{0}
+\setcounter{section@level}{3}
+}

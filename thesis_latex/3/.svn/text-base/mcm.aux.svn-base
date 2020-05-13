@@ -1,0 +1,59 @@
+\relax 
+\FN@pp@footnotehinttrue 
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Mobile Cloud Middleware}{19}{chapter.4}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}A Generic Middleware Framework for Mobile Cloud Services}{19}{section.4.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Architecture of the Mobile Cloud Middleware}}{21}{figure.4.1}}
+\newlabel{fig:mcmArchitecture}{{4.1}{21}{Architecture of the Mobile Cloud Middleware\relax }{figure.4.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}MCM architecture and realization}{21}{subsection.4.1.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Asynchronicity for handling process intensive mobile cloud services}{23}{subsection.4.1.2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2.1}MCM and AC2DM}{24}{subsubsection.4.1.2.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2.2}MCM and APNS}{24}{subsubsection.4.1.2.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Analysis of MCM}{25}{section.4.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Performance model of the MCM}{25}{subsection.4.2.1}}
+\newlabel{eqn:mcs:regular:times}{{4.1}{25}{Performance model of the MCM\relax }{equation.4.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Mobile cloud service invocation cycle: Activities and timestamps in (a) Regular case (b) With the MCM in place}}{26}{figure.4.2}}
+\newlabel{fig:timestampsMCM}{{4.2}{26}{Mobile cloud service invocation cycle: Activities and timestamps in (a) Regular case (b) With the MCM in place\relax }{figure.4.2}{}}
+\newlabel{eqn:mcs:mware:times}{{4.2}{26}{Performance model of the MCM\relax }{equation.4.2}{}}
+\citation{htc:arena}
+\newlabel{eqn:mcs:regular:sync:times}{{4.3}{27}{Performance model of the MCM\relax }{equation.4.3}{}}
+\newlabel{eqn:mcs:mware:sync:times}{{4.4}{27}{Performance model of the MCM\relax }{equation.4.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Performance analysis of the MCM}{27}{subsection.4.2.2}}
+\@writefile{brf}{\backcite{htc:arena}{{27}{4.2.2}{subsection.4.2.2}}}
+\citation{SriramaETAL:SciCloud.10}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Test case scenario used for the performance analysis of the MCM}}{28}{figure.4.3}}
+\newlabel{fig:ApplicationDiagram}{{4.3}{28}{Test case scenario used for the performance analysis of the MCM\relax }{figure.4.3}{}}
+\@writefile{brf}{\backcite{SriramaETAL:SciCloud.10}{{28}{4.2.2}{figure.4.3}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Mobile cloud service invocation times for the test case scenario in public cloud (Amazon)}}{29}{figure.4.4}}
+\newlabel{fig:AnalysisAmazon}{{4.4}{29}{Mobile cloud service invocation times for the test case scenario in public cloud (Amazon)\relax }{figure.4.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Mobile cloud service invocation times for the test case scenario in private cloud (SciCloud)}}{29}{figure.4.5}}
+\newlabel{fig:AnalysisScicloud}{{4.5}{29}{Mobile cloud service invocation times for the test case scenario in private cloud (SciCloud)\relax }{figure.4.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Related work}{30}{section.4.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Summary}{31}{section.4.4}}
+\FN@pp@footnotehinttrue 
+\@setckpt{3/mcm}{
+\setcounter{page}{33}
+\setcounter{equation}{4}
+\setcounter{enumi}{0}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{0}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{chapter}{4}
+\setcounter{section}{4}
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{5}
+\setcounter{table}{0}
+\setcounter{pp@next@reset}{1}
+\setcounter{@fnserial}{0}
+\setcounter{NAT@ctr}{0}
+\setcounter{Item}{0}
+\setcounter{Hfootnote}{0}
+\setcounter{section@level}{1}
+}

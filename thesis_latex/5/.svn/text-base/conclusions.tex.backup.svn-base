@@ -1,0 +1,41 @@
+% this file is called up by thesis.tex
+% content in this file will be fed into the main document
+
+%: ----------------------- name of chapter  -------------------------
+\chapter{Conclusions} % top level followed by section, subsection
+Mobile domain is looking towards cloud computing with more expectation than just data synchronization,  cloud resources may be used for enriching mobile applications with data-intensive processes that are time consuming and cannot be handle locally within the handset. The development of mobile applications is tied to specific cloud architecture, and thus mobile technologies are experimenting a lock in the data and application integration with other technologies. The current thesis introduced several mobile cloud services and the inherent problems in developing applications with these services. To address these problems a generic middleware framework for providing hybrid mobile cloud services is proposed. The architecture of the MCM is explained in detail and the detailed analysis of the framework is provided with an application scenario. MCM interoperability altogether with the asynchronous notification service enables the creation of powerful mashups that can invoke cloud services in a concurrent way from the handset. From this analysis we could observe that the MCM shows reasonable performance levels, thus validating the proof of concept.
+
+While the prototype is working fine with the traditional web technologies like the HTTP and servlets, a future research will consist in extend the architecture to better suite the cellular network, by providing the access to the MCM via the XMPP protocol. XMPP is an open technology for real-time communication, which powers a wide range of applications including instant messaging, presence, multi-party chat, voice and video calls, collaboration, lightweight middleware and generalized routing of XML data. However, this requires the protocol to be implemented for the mobile platforms we have considered in the analysis; Android and iOS. Due scalability is the main concern for centralized middleware, and the current Java implementation cannot easily scale, due the language limitations. Another improvement involves the re-implemention of the middleware using Erlang since it is more suitable for highly concurrency programs.
+
+
+Another improvement involves extending the MCM to the Mobile Enterprise. A Mobile Enterprise can be established in a cellular network by participating Mobile Hosts, which act as web service providers from smart phones, and their clients. Mobile Enterprise research built a Mobile Web Services Mediation Framework (MWSMF) based on the ESB technology that helps in handling QoS, discovery and integration issues of mobile web services. The main idea consist in including the MCM as a component to the MWSMF thus providing a single interface for accessing both the mobile web services and mobile cloud services. The details will be addressed by the development of future publications.
+
+The cloud services invocation from the handset enables a next generation of mobile applications that are not limited by storage space and processing power.  These kinds of applications access the shared pool of computing resources provided by the cloud on demand, and thus are able to handle tasks that require data-intensive processing. This thesis introduces a cases of study for MCM that involves the explanation of three applications with detailed architectural (services, hardware, etc). Zompopo is an Android application that makes use of cloud services for extending the capabilities of a generic calendar within the mobile phone. Zompopo fosters the provisioning of context-aware services from the cloud, since it tries utilizing a historical set of data collected by the accelerometer (stored and processed in the cloud) for predicting activities that may help the user for scheduling his or her calendar with the activities that will be performing during the day. The processing of historical data using Hadoop (MapReduce) allows finding trends that enable to context-aware applications fitting proactive responses for better adapting in the user's context. The performance analysis of the application shows that Zompopo can utilize cloud services for processing historical data with significant ease and reasonable performance latencies on the devices. 
+
+Since Zompopo's principal aim was the consumption of cloud services from the handset for enriching mobile applications; a basic MapReduce algorithm for matching patterns is introduced. However, such algorithm will be improved in next application release for getting more precise activities prediction. We are also interested in implementing more context-aware services from the cloud that involve the use of another kind of sensors like magnetic field, in order to find patterns such as direction, presence, rotation, angle, etc.
+
+CroudSTag is one such application built for the Android devices. The application takes a set of pictures from the cloud and uses the SaaS of Face.com to recognize faces and people from the pictures. The application then enables the user to send, to each recognized person, an invitation to be part of a social group and it uses Facebook for the social group creation. The social groups thus formed with people of common interests, results in sharing and collaboration relationships among the members. The paper explained the application with detailed architectural and technological choices. The performance analysis of the application shows that the social groups can be formed with significant ease and reasonable performance latencies on the devices.
+
+
+
+%: ----------------------- paths to graphics ------------------------
+
+% change according to folder and file names
+\ifpdf
+    \graphicspath{{X/figures/PNG/}{X/figures/PDF/}{X/figures/}}
+\else
+    \graphicspath{{X/figures/EPS/}{X/figures/}}
+\fi
+
+%: ----------------------- contents from here ------------------------
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------------
+%: ----------------------- end of thesis sub-document ------------------------
+% ---------------------------------------------------------------------------
+

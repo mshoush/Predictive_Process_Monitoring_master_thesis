@@ -1,0 +1,184 @@
+% this file is called up by thesis.tex
+% content in this file will be fed into the main document
+
+%: ----------------------- name of chapter  -------------------------
+\chapter{Mobile Cloud Middleware} % top level followed by section, subsection
+
+%While most of the mobile cloud technologies are based on data synchronization, 
+
+Several are the issues that were discussed in previous chapter, regarding the use of cloud services from the mobile. Most of the cloud solutions offered for handsets consist in applications that make use of synchronization of data. However, 
+
+
+not focus on the processing of large amount of data. This chapter introduces the Mobile Cloud Middleware (MCM) for solving most of the issues described above.
+
+
+%: ----------------------- paths to graphics ------------------------
+
+% change according to folder and file names
+\ifpdf
+    \graphicspath{{X/figures/PNG/}{X/figures/PDF/}{X/figures/}}
+\else
+    \graphicspath{{X/figures/EPS/}{X/figures/}}
+\fi
+
+%: ----------------------- Mobile Cloud Middleware ------------------------
+
+\section{A Generic Middleware Framework for Mobile Cloud Services}
+Mobile cloud services use the shared pool of computing resources provided by the clouds to get the process and storage intensive tasks done from smart phones. Generally mobile applications focus at enriching their functionality to a mashup application, using the cloud services. However, clouds are looking forward to the mobile domain, having their expectations focused in the idea of data synchronization services. Mobile sync refers to the synchronization of data in the handset with a server and a portal in the cloud. This kind of approach takes advantage of the cloud allowing the centralization of data resources (contacts, e-mail, pictures, etc.) in the storage service, from several sources (social networks, email providers, etc.), for being accessible via SyncML protocol, in such a way that empowers the managing of real-time information from the handset. Some of the most popular vendors offering synchronization services are Funambol, Mobical.net, rseven.com and Memotoo.com.
+
+While pure mobile cloud services are based on data synchronization, there are also other cloud services in each layer of the cloud computing domain (IaaS, PaaS, and SaaS) that might enable the mobiles for increasing their functional capabilities. These services mainly offer processing data-intensive tasks that are high demanding for a handset. This can be observed as most of the SaaS are extended to fit the mobile demand. For example, both Google docs and Zoho provide a mobile version of their office suites, also Picasa and flickr offer a service to visualize pictures that fit the mobile screen.  Several other cloud services are accessible through special applications, specific to different mobile platforms, which can be bought in the mobile application market, for example, Google Analytics service can retrieve reports from applications such as GAnalyticz for Android, I Spy Analytics for Iphone and Google Analytics Mobile for Windows Mobile. 
+
+Mobile applications can also access basic infrastructure cloud services (IaaS) using APIs, which are provided in some cases by the cloud vendors or by one open source community. Most of the APIs, which enable interacting with the public and private clouds, are not suitable for directly deploying them into a mobile phone. The reason being; the integration issues with the compiler or other libraries which are required by the cloud API, but are not compatible for mobiles. For example in jclouds API when some dependencies are included within Android, various runtime issues emerge which are not supported by the platform compiler, thus the application gets unable to be executed.  There exist alternative solutions, which can solve the problem of interacting with the cloud from the mobiles. APIs such as jets3t and typica can be deployed on Android. However, it is not possible to take the complete advantage of all the capabilities of the cloud, in such cases, as open source APIs, in the mobile environment, have certain limitations and some functionality is lost in the process. Moreover, cloud vendors are generally observed to be slow in providing APIs for multiple mobile platforms. For example, at the time of writing this thesis, Amazon just released the mobile API for Android and still in beta.
+
+While several mobile cloud services are existing today, most of them are bounded by numerous constraints like the mobile platform restrictions, cloud provider's technology choices etc. They provide proprietary APIs and routines to consume the services. Therefore, cloud interoperability is not possible and when a lighter mobile application is to be created, it has to be developed for a specific cloud provider. For example: an application created on Android using jets3t to access S3 from Amazon, and Walrus from Eucalyptus, has to be suffer some changes in its configuration when it tries to access each of the cloud storage services. Even though Eucalyptus is compatible with Amazon infrastructure, there is no full integration between them. To address most of these problems, the Mobile Cloud Middleware (MCM) has been designed.
+
+\subsection{MCM architecture and realization}
+
+MCM is introduced as an intermediary between the mobile phones and the cloud. The architecture is shown in figure~\ref{fig:mcmArchitecture}. MCM fosters mobile platform heterogeneity and the combination of different cloud services into a mobile mashup application. When an application tries to connect to a basic cloud service, it connects to the TP Handler component of the middleware, which receives the request. The transportation handler can receive the requests based on several protocols like the Hypertext Transfer Protocol (HTTP) or the Extensible Messaging and Presence Protocol (XMPP). The request is then processed by the Interoperability API engine, which selects the suitable cloud API and creates a unique adapter that ensures the transactional process with the cloud.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{3/figures/MCMArchitectureAsync.png}
+\caption{Architecture of the Mobile Cloud Middleware}
+\label{fig:mcmArchitecture}
+\end{figure}
+
+When the request is forwarded to the MCM Manager, it first creates a session assigning a unique identifier for saving the system configuration of the handset (OS, clouds credentials, etc.)  and the service configuration requested (list of services, cloud providers, types of transactions, etc.) in a temporal storage space, respectively. The identifier is used for handling different requests from multiple mobile devices and for sending the notification back when the process running in the cloud is finished. Later, the interoperability API engine verifies the service configuration for selecting the suitable API, depending on the cloud vendor. A temporal transaction space is created for exchanging data between the clouds. The aim of the temporal space is to avoid offloading the same information from the mobile, again and again. 
+
+Once the interoperability API engine decides which API set it is going to use, the MCM Manager requests for the specific routines from the Adapter Servlets. The servlets contain the set of functions for the consumption of the cloud services. Finally, MCM Manager encapsulates the API and the routine in an adapter for performing the transactions and accessing the SaaS. The result of each cloud transaction is sent back to the handset in a JSON (JavaScript Object Notation) format, based on the application design.
+
+Since the completion of a cloud task, most often, is time consuming, it is not logical to make the mobile application waiting for the response and even not tolerable from the user's perspective. To support this, MCM supports asynchronous mobile cloud service invocation for both Android and iOS platforms. The asynchronous services thus enable to perform concurrent activities at the device. In this process, when the mobile terminal sends a request to the middleware, the mobile immediately gets a response that the transaction is in progress. Now the mobile device can continue with other activities. When the transaction is finished at the MCM, the middleware has to follow a specific protocol to notify the mobile terminal about the updates.
+
+MCM is implemented in Java as a portable module based on Servlets technology, which can easily be deployed on a Tomcat Server. Mobile cloud services using APIs from Amazon EC2, S3, Eucalyptus, Google and some open source cloud projects like Eucalyptus are considered. From the cloud infrastructure level, jets3t is the API within MCM that enables the access to the storage service from Amazon and Google. jets3t is an open source API that handles the maintenance for buckets and objects (creation, deletion, modification). A modified version of the API was implemented for handling the storage service of Walrus (Eucalyptus storage service). Latest version of jets3t handles synchronization of objects and folders from the cloud. typica API and the Amazon API are implemented to manage (turn on/off, attached volumes) the instances from Eucalyptus and EC2 respectively. MCM also has support for SaaS from Facebook, Google Analytics and Picasa. 
+
+
+%: ----------------------- Asynchronous Notification Invocation------------------------
+
+\subsection{Asynchronicity for handling process intensive mobile cloud services}
+
+Some mobile applications, whose functionality depends on mobile cloud services, are able to provide a tolerant response time to the user. For example, searching for a location in Google Maps or requesting for a preview of a picture in flickr. However, when a mobile application needs to perform a task which is expected to be time consuming, it cannot hang the mobile phone until the response arrives. Mobile devices tend to get stuck if the computation offloading requires long waiting, and in some cases unable the complete OS or just don't allow performing another task at the same time. 
+
+As a solution to address these issues, MCM implements an asynchronous notification feature for mobile devices that foster the de-coupling between the client and server. A mobile application can delegate the execution of a remote task in the local background to be processed in the cloud. Once the process is finished at the cloud, a notification about the result of the task is sent back to the handset. The approach can also be used within a mobile device to concurrently execute several tasks in multiple clouds. 
+
+However, sending the notification back to the mobile device is a tricky process. To have a generalized solution, one can make the mobile check for the status of the service regularly. However, this puts a lot of load on the mobile networks. Alternatively, we can make the mobile device a service provider, which was studied in mobile web service provisioning project. The study developed a Mobile Host, which can be used in providing web services from the smart phones. When the smart phone acts as a server, the mobile cloud service response can be sent directly to the device. However, the current implementations of the Mobile Host are available only for PersonalJava and J2ME platforms. Considering this, we developed solutions to provide the asynchronous mobile cloud service invocation, specific to Android and iOS platforms, due to their popularity in the mobile market, using AC2DM (Android Cloud to Device Messaging Framework) and APNS (Apple Push Notification Service), respectively. 
+
+
+\subsubsection{MCM and AC2DM}
+
+Android Cloud to Device Messaging Framework is a service that enables to send data from servers to applications on Android devices. AC2DM is a lightweight mechanism which enables the servers to communicate asynchronously with mobile applications running on Android OS. This communication is established between third-party servers to send lightweight messages to control the behavior of their Android applications or just to notify about the result of any process which was running on the server and the application needs to be notified about. The application does not need to be running to handle the incoming messages since they are handled by the system through an Intent Broadcast. Once the message is receive the system will wake up the application via Intent Broadcast passing the raw message data received straight to the application. 
+
+MCM implements the communication with the third party servers to inform about the completion of the tasks in the cloud. In order to receive messages from the third party servers to the Android mobile the mobile must be registered against the C2DM Google services which will give one Registration ID to the device. Once the device gets the Registration ID it must send it to the Third-party server, as the server uses it since it to route the messages by the C2DM Google Services. This Registration ID is updated periodically and the third-party server needs to be notified about it. In order to send a message to a particular device, the third-party server sends one Https request to C2DM Google services sending the Device Registration ID, the Authorization token associated to the C2DM service, the message and a delay while idle time. The C2DM Google services will send the message to the mobile application which will be handled by the system through an Intent Broadcast and will perform the actions associated to the message. 
+
+\subsubsection{MCM and APNS}
+Applications on Apple mobile devices running iOS 3.0 or newer can receive asynchronous messages provided through Apple Push Notification Service (APNS). APNS messages are sent through binary interface (gateway.push.apple.com:2195 and gateway.sandbox.push.apple.com:2195) that uses streaming TCP socket design. Forwarding messages to device happens through constantly open IP connection. TLS (or SSL) certificate (provisioned through iOS developer portal) is needed for creating secure communication channel and for establishing trusted provider identity. To avoid being considered a DoS attacker, using one connection for multiple notifications, rather than creating new for each one, is desired. 
+
+APNS has a feedback service that records failed notification delivery attempts. This information should be checked regularly to avoid sending messages to devices that do not have the targeted application installed anymore. For the same reason application should register itself at MCM for notifications at each start by providing at least it's device token that it received from APNS. Device token is 32 byte hexadecimal number that is unique for an application on a device and does not change.
+
+Messages sent to iOS devices via APNS consist of JSON payload with maximum length of 256 bytes. Within message payload, values for keys alert, sound and badge can be used to customize the message alert being shown to user upon receiving it. Because the payload size is limited, it is used to provide enough information for the application to make request for additional details. When the device is unable to receive notifications for some time (e.g. due to being offline or switched off) and multiple notifications have been sent, only the last one is guaranteed to be delivered.
+
+\section{Analysis of MCM}
+
+Once the MCM prototype was designed and developed, it was evaluated to verify its performance. The performance model and the analysis are addressed in the following subsections.
+
+\subsection{Performance model of the MCM}
+
+In the regular mobile cloud service invocation cycle, as shown in figure~\ref{fig:timestampsMCM}a, the total time of invocation includes the transmission delays and the time to process the service at the cloud. So the time taken to handle a mobile cloud service (MCS), $T_{{mcs}_r}$ can be calculated as:
+
+\begin{equation}
+T_{{mcs}_r} \cong T_{tr} + T_c \label{eqn:mcs:regular:times}
+\end{equation}
+
+
+\begin{figure}
+\centering
+\includegraphics[width=0.65\textwidth]{3/figures/TimestampsMCM.png}
+\caption{Mobile cloud service invocation cycle: Activities and timestamps in (a) Regular case (b) With the MCM in place}
+\label{fig:timestampsMCM}
+\end{figure}
+
+
+Where, $T_{tr}$ is the transmission time taken across the radio link for the MCS invocation. The value includes the time taken to transmit the request to the cloud and the time taken to send the response back to the mobile. Apart from these values, several parameters also affect the transmission delays like the TCP packet loss, TCP acknowledgements, TCP congestion control etc. So a true estimate of the transmission delays is not always possible. Alternatively, one can take the values several times and can consider the mean values for the analysis. $T_c$ is the time taken to process the actual service at the cloud. $\cong$ is considered in the equations as there are also other timestamps involved, like the client processing at the mobile phone, as shown in figure~\ref{fig:timestamps}a. However, these values will be quite small and cannot be calculated exactly.
+
+When the MCM is introduced to the invocation cycle, the invocation cycle transforms to the one  shown in figure~\ref{fig:timestamps}b. Here, the total mobile cloud service invocation time, $T_{{mcs}_m}$ is:
+
+\begin{equation}
+T_{{mcs}_m} \cong T_{tr} + T_m + T_{te} + T_c \label{eqn:mcs:mware:times}
+\end{equation}
+
+$T_{tr}$ becomes the transmission time across the radio link for the invocation between the mobile phone and the MCM. $T_m$ is the time taken to process the request at the middleware. $T_{te}$ is the transmission time across the Internet/Ethernet for the invocation between the middleware and the cloud. $T_c$ stays the same as in equation~\ref{eqn:mcs:regular:times}.
+
+From equation~\ref{eqn:mcs:mware:times}, we can observe that extra delays are included to the invocation cycle with the middleware in place. However, apart from the main benefit of interoperability that is brought to MCS, several observations also make the middleware a better solution even in terms of the performance. Consider the case of synchronizing the data across multiple clouds or having to perform parts of the service across multiple clouds; In this case, the regular mobile cloud service invocation cycle time becomes,
+
+\begin{equation}
+T_{{mcs}_r} \cong \sum_{i=1}^n (T_{{tr}_i} + T_{c_i}) \label{eqn:mcs:regular:sync:times}
+\end{equation}
+%T_mcs_r ~= sigma i(1-n) (T_tr_i + T_c_i)
+
+Where as in the case where the MCM is involved in the invocation cycle,
+
+\begin{equation}
+T_{{mcs}_m} \cong  T_{tr} + T_m + \sum_{i=1}^n (T_{{te}_i} + T_{c_i}) \label{eqn:mcs:mware:sync:times}
+\end{equation}
+%T_mcs_m ~=  T_tr + T_m + sigma i(1-n) (T_te_i + T_c_i)
+
+However, the transmission delays across the radio link are far greater than the transmission delays across the Internet due to the still lesser transmission capabilities across the mobile networks. Assuming, $T_{te}$ $\lll$ $T_{tr}$, the middleware solution quickly outperforms the regular solution as the value of $i$ increases in equations \ref{eqn:mcs:regular:sync:times} \& \ref{eqn:mcs:mware:sync:times}.
+
+While performance model of the above synchronous cases is fine, the asynchronous mobile cloud service invocation, addressed in section III.A, works the best for the mobile terminal. Here the mobile phone just sends the request and gets the acknowledgement back. The response is followed later. MCM will be at its conceptual best with this case, as the middleware takes care of the process completely, freeing the mobile terminal. However, in this asynchronous invocation, coming up with proper performance model is tricky. The delays completely depend on external sources like the latencies with AC2DM Framework and the respective clouds. The phone is rather free to continue with its tasks, so not much load on it. In simple, in this case $T_{tr}$ increases as it has 2 invocations in radio link, and $T_{m}$ increase as MCM does more processing. And both $T_{{mcs}_r}$ and $T_{{mcs}_m}$ rather stay constant for however big the mobile cloud service may be.
+
+\subsection{Performance analysis of the MCM}
+
+To analyze the performance of the MCM, the cloud data synchronization application explained in section III.B is considered. Several photos were taken with the mobile phone, of multiple resolutions, thus varying the size of the image. Figure~\ref{fig:ApplicationDiagram} explains the scenario in detail. HTC desire phone~\cite{htc:arena}, with a 5 megapixel color camera with auto focus and flash was considered for the analysis. It has a CPU speed of 1GHz, 576 MB of RAM and storage that can be extended up to 32GB. The application was developed based on the Android platform, compatible with Android 2.2 API. Wifi connection was use to connect the mobile to the middleware or the cloud. So, test cases were taken in a network with an upload rate of $\approx$ 1409 kbps and download rate of $\approx$ 3692 kbps, respectively. However, as mentioned already, estimating the true values of transmission capabilities achieved at a particular instance of time is not trivial. To counter the problem, we have taken the time stamps several times (10 times), across different parts of the day and the mean values are considered for the analysis.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth]{3/figures/ApplicationDiagram.png}
+\caption{Test case scenario used for the performance analysis of the MCM}
+\label{fig:ApplicationDiagram}
+\end{figure}
+
+As part of the application, the photos taken by the mobile phone were synchronized across multiple clouds. The extra latencies added by the MCM to the invocation cycle are calculated. Figures~\ref{fig:AnalysisAmazon} and~\ref{fig:AnalysisScicloud} show the times taken to upload the photos to Amazon EC2 and the SciCloud~\cite{SriramaETAL:SciCloud.10}, respectively. SciCloud is a private cloud at University of Tartu, built based on the Eucalyptus technology. Thus the considered service becomes a hybrid cloud service, as it uses both the public and private clouds.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth]{3/figures/AnalysisAmazon.png}
+\caption{Mobile cloud service invocation times for the test case scenario in public cloud (Amazon)}
+\label{fig:AnalysisAmazon}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth]{3/figures/AnalysisScicloud.png}
+\caption{Mobile cloud service invocation times for the test case scenario in private cloud (SciCloud)}
+\label{fig:AnalysisScicloud}
+\end{figure}
+
+From figures~\ref{fig:AnalysisAmazon} and~\ref{fig:AnalysisScicloud}, we can observe that, even though a small latency is added to the invocation cycle with the middleware, the total time of invocations vary uniformly with the ones of regular invocation cycle.  The phenomenon is observed across both the public cloud and the private cloud. From this analysis we could observe that the MCM shows reasonable performance levels, thus validating the proof of concept. All the experiments addressed here are conducted 10 times and the mean values are considered for the analysis, to have statistically valid results.
+
+
+\section{Related work}
+Even though cloud computing domain is getting popular, still most of the applications are dependent on the proprietary API of the cloud providers. Several open source projects like jets3t, jclouds etc have been working to merge the functionality of different cloud APIs in order to create a single API which can be used as a generic one for accessing any cloud. jets3t is one of the projects, which has produced an open source API written in Java which allows the applications to use S3 from Amazon and the storage service, Walrus from Eucalyptus. Latest version of jets3t also includes support for the Google storage service (Google for developers).
+
+Jclouds is a multicloud API which aims to combine all the different routines for connecting and consuming cloud services using just one library. Jclouds gathers all the common functionality in core libraries, although special dependencies have to be included depending on which cloud the application is supposed to access. Similarly, typica is a Java client library which can be used for consuming variety of cloud services from Amazon Services like the EC2 and S3.  Other projects working with similar targets are Deltacloud and Dasein.
+
+However, not all of these projects have implementations compatible with mobile platforms like the Android. Only, jets3t can be used in the development of mobile applications for Android OS. Some parts of the other open source APIs can be used for the development of mobile applications but most of them are not suitable at all, due to the dependency issues which are not supported within the mobile OS. So the research with mobile cloud computing domain is still in its infancy. As far as developing community based applications for mobile devices is concerned, produced a report of feasible mobile cloud computing based application domains.
+
+Another project which is looking to use the power of the cloud to enhance mobile experience is the Zeus project, which is targeting the use of virtual machines from the mobile phones and proposing a new concept known as VMaaS (Virtual Machine as a Service).
+
+Middleware approaches similar to MCM have also been addressed in the literature. MCCM (Mobile Cloud Computing Middleware) is a project which involves the use of a middleware, standing between the mobile and the cloud, for the consumption of web services (WS) in a mobile mashup WS application. It handles creating user profiles from the context of the mobile phone, storing the system configuration (pre-defined set of WS which can be consumed from the handset) and the service configuration (information needed for constructing a request and combining services) respectively, for managing existing resources in the Internet Cloud. However, such middleware solution and the API support seems to be tightly coupled. 
+
+Cloud agency is another solution that aims to integrate GRID, cloud computing and mobile agents. The specific role of GRID is to offer a common and secure infrastructure for managing the virtual cluster of the cloud through the use of mobile agents. Agents introduce features that provide the users a simple way for configuring virtual clusters. Agora is another middleware solution which is in the development, which will enable new large-scale mobile-cluster applications and will use mobile devices as nodes of a large-scale cloud-computing infrastructure. Agora will enable the devices to work together seamlessly. However, a concrete implementations cannot be found yet.
+
+However, MCM is much more scalable and portable solution which manages all the transactions with multiple clouds in a transparent way. It allows to build more lighter applications for mobile devices, as the developers do not have to deal with several APIs, it just have to implement the functions provided as a web service at the middleware. MCM mainly enables interoperability across multiple cloud architectures. One feature which really separates it from other approaches is its support for asynchronous push notification, which frees the mobile resources during most of the invocation process. Moreover, our earlier research also involved working with middleware for mobile web services, where Srirama et al. have realized a mobile web service mediation framework (MWSMF) that helps in offering proper quality of service (QoS) and discovery mechanisms for the services being provided from the smart phones. MWSMF is shown to be reasonably scalable and our future research will try to add the MCM as a component to the MWSMF.
+
+
+\section{Summary}
+While the prototype is working properly with the traditional web technologies like the HTTP and servlets, the future research will be focus on extend the architecture to better suite the cellular network, by providing the access to the MCM via the XMPP protocol. XMPP is an open technology for real-time communication, which powers a wide range of applications including instant messaging, presence, multi-party chat, voice and video calls, collaboration, lightweight middleware and generalized routing of XML data. However, this requires the protocol to be implemented for the mobile platforms we have considered in the analysis; Android and iOS.
+
+Since scalability is the main concern for centralized middleware, and the current Java implementation cannot easily scale, due the language limitations. Another improvement involves the re-implemention of the middleware using Erlang since it is more suitable for highly concurrency programs.
+
+
+
+% ---------------------------------------------------------------------------
+%: ----------------------- end of thesis sub-document ------------------------
+% ---------------------------------------------------------------------------
+

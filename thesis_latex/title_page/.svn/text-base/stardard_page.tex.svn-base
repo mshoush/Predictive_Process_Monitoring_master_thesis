@@ -1,0 +1,46 @@
+\begin{titlepage}
+
+\begin{center}
+
+
+
+\textsc{UNIVERSITY OF TARTU}\\
+
+\textsc{FACULTY OF MATHEMATICS AND COMPUTER SCIENCE}\\
+
+\texttt{Institute of Computer Science}\\
+
+\hbox{}\\[6cm]
+
+
+% Title
+%\HRule \\[0.4cm]
+\textsc{ \large Huber Flores}\\[0.5cm]
+{ \Huge \bfseries Mobile Cloud Middleware}\\[0.5cm]
+{\large Master Thesis (30 EAP)}\\[6cm]
+
+
+%\HRule \\[1.5cm]
+
+% Author and supervisor
+%\begin{minipage}{0.4\textwidth}
+%\begin{flushleft} \large
+%\emph{Author:}\\
+%John \textsc{Smith}
+%\end{flushleft}
+%\end{minipage}
+\begin{minipage}{0.9\textwidth}
+\begin{flushright} \large
+\emph{Supervisor: Satish Srirama, PhD} 
+ %\textsc{Brown}
+\end{flushright}
+\end{minipage}
+
+\vfill
+
+% Bottom of the page
+{\large TARTU, 2011}
+
+\end{center}
+
+\end{titlepage}

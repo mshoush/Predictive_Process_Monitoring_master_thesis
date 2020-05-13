@@ -1,0 +1,48 @@
+
+% this file is called up by thesis.tex
+% content in this file will be fed into the main document
+
+\chapter{Related Work} % top level followed by section, subsection
+Even though cloud computing domain is getting popular, still most of the applications are dependent on the proprietary API of the cloud providers. Several open source projects like jets3t, jclouds etc have been working to merge the functionality of different cloud APIs in order to create a single API which can be used as a generic one for accessing any cloud. jets3t is one of the projects, which has produced an open source API written in Java which allows the applications to use S3 from Amazon and the storage service, Walrus from Eucalyptus. Latest version of jets3t also includes support for the Google storage service (Google for developers).
+
+Jclouds is a multicloud API which aims to combine all the different routines for connecting and consuming cloud services using just one library. Jclouds gathers all the common functionality in core libraries, although special dependencies have to be included depending on which cloud the application is supposed to access. Similarly, typica is a Java client library which can be used for consuming variety of cloud services from Amazon Services like the EC2 and S3.  Other projects working with similar targets are Deltacloud and Dasein.
+
+However, not all of these projects have implementations compatible with mobile platforms like the Android. Only, jets3t can be used in the development of mobile applications for Android OS. Some parts of the other open source APIs can be used for the development of mobile applications but most of them are not suitable at all, due to the dependency issues which are not supported within the mobile OS. So the research with mobile cloud computing domain is still in its infancy. As far as developing community based applications for mobile devices is concerned, produced a report of feasible mobile cloud computing based application domains.
+
+Another project which is looking to use the power of the cloud to enhance mobile experience is the Zeus project, which is targeting the use of virtual machines from the mobile phones and proposing a new concept known as VMaaS (Virtual Machine as a Service).
+
+Middleware approaches similar to MCM have also been addressed in the literature. MCCM (Mobile Cloud Computing Middleware) is a project which involves the use of a middleware, standing between the mobile and the cloud, for the consumption of web services (WS) in a mobile mashup WS application. It handles creating user profiles from the context of the mobile phone, storing the system configuration (pre-defined set of WS which can be consumed from the handset) and the service configuration (information needed for constructing a request and combining services) respectively, for managing existing resources in the Internet Cloud. However, such middleware solution and the API support seems to be tightly coupled. 
+
+Cloud agency is another solution that aims to integrate GRID, cloud computing and mobile agents. The specific role of GRID is to offer a common and secure infrastructure for managing the virtual cluster of the cloud through the use of mobile agents. Agents introduce features that provide the users a simple way for configuring virtual clusters. Agora is another middleware solution which is in the development, which will enable new large-scale mobile-cluster applications and will use mobile devices as nodes of a large-scale cloud-computing infrastructure. Agora will enable the devices to work together seamlessly. However, a concrete implementations cannot be found yet.
+
+However, MCM is much more scalable and portable solution which manages all the transactions with multiple clouds in a transparent way. It allows to build more lighter applications for mobile devices, as the developers do not have to deal with several APIs, it just have to implement the functions provided as a web service at the middleware. MCM mainly enables interoperability across multiple cloud architectures. One feature which really separates it from other approaches is its support for asynchronous push notification, which frees the mobile resources during most of the invocation process. Moreover, our earlier research also involved working with middleware for mobile web services, where Srirama et al. have realized a mobile web service mediation framework (MWSMF) that helps in offering proper quality of service (QoS) and discovery mechanisms for the services being provided from the smart phones. MWSMF is shown to be reasonably scalable and our future research will try to add the MCM as a component to the MWSMF.
+
+% ----------------------- paths to graphics ------------------------
+
+% change according to folder and file names
+\ifpdf
+    \graphicspath{{8/figures/PNG/}{8/figures/PDF/}{8/figures/}}
+\else
+    \graphicspath{{8/figures/EPS/}{8/figures/}}
+\fi
+
+% ----------------------- contents from here ------------------------
+
+
+
+
+ 
+
+% ---------------------------------------------------------------------------
+%: ----------------------- end of thesis sub-document ------------------------
+% ---------------------------------------------------------------------------
+
+
+
+ 
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+
+% Thesis Abstract -----------------------------------------------------
+
+
+%\begin{abstractslong}    %uncommenting this line, gives a different abstract heading
+\begin{abstracts}        %this creates the heading for the abstract page
+
+Both cloud computing and mobile computing domains have advanced rapidly and are the promising technologies for the near future. Cloud computing becomes mobile when a mobile device tries to access the shared pool of computing resources provided by the cloud, on demand. Mobile technologies are mainly drawing their attention to the clouds due to the increasing demand of the applications, for processing power, storage space and energy. Mobile applications take advantage of the elasticity of the cloud to remotely process the task but at the same time maintain a soft-real time response behavior.
+
+However, developing mobile cloud applications is tricky and involves working with services and APIs from different cloud vendors. Most often these APIs are not interoperable and the information which is processed and stored into the cloud is not transferable to other clouds. To counter the problems the thesis studied a middleware solution, Mobile Cloud Middleware (MCM), which handles the interoperability issues, and eases the use of processing intensive services from mobile phones. A prototype of MCM was developed and the detailed performance analysis of the framework shows that the middleware framework improves the quality of service for mobiles and helps in maintaining soft-real time responses.
+
+The thesis also has realized several case studies using the MCM. One of them is Zompopo, an Android application that provides an intelligent calendar, combining Google Calendar and the accelerometer sensor of the mobile, which allows the user to schedule his/her activities from the beginning of the day according to his previous week's activities. The application is explained with detailed architectural and technological choices. The application uses MapReduce to analyze the accelerometer sensor data to deduce any diversions from the regular calendar activity, thus efficiently utilizing the cloud computing resources. A detailed performance analysis of the application is also provided, showing how mobile application benefit by going cloud-aware.
+
+Apart from Zompopo, the thesis also tried to realize some social network applications using the MCM. Social networks have become quite popular these days and the creation of social groups of people with common interests, results in sharing and collaborative relationships among the members. CroudSTag, the developed Android application, aids in forming social groups of common interest, from the mobile devices. The application obtains a set of pictures from a storage cloud, uses the face recognition cloud services to identify the people, and forms social groups on Facebook, a well known social network. The application is explained with detailed architectural and technological choices. The performance analysis of the application shows that the social groups can be formed with significant ease and reasonable performance latencies from the mobile devices with the help of MCM.
+
+\end{abstracts}
+%\end{abstractlongs}
+
+
+% ---------------------------------------------------------------------- 

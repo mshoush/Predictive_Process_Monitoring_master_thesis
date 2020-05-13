@@ -1,0 +1,55 @@
+\begin{titlepage}
+
+\begin{center}
+
+
+
+\textsc{UNIVERSITY OF TARTU}\\
+
+\textsc{FACULTY OF MATHEMATICS AND COMPUTER SCIENCE}\\
+
+\texttt{Institute of Computer Science}\\
+
+\hbox{}\\[6cm]
+
+
+% Title
+%\HRule \\[0.4cm]
+\textsc{ \large Your Name}\\[0.5cm]
+{ \Huge \bfseries Thesis Tittle}\\[0.5cm]
+{\large Master/Bachelor Thesis (30 EAP)}\\[3cm]
+
+
+%\HRule \\[1.5cm]
+
+% Author and supervisor
+%\begin{minipage}{0.4\textwidth}
+%\begin{flushleft} \large
+%\emph{Author:}\\
+%John \textsc{Smith}
+%\end{flushleft}
+%\end{minipage}
+\begin{minipage}{0.9\textwidth}
+\begin{flushright} \large
+\emph{Supervisor: Supervisor name, degree}  	  %degree (e.g. Phd, Msc, etc.)
+\emph{Co-supervisor: Co-supervisor name, degree}  %if any... and so on if more than 1
+ %\textsc{Brown}
+\end{flushright}
+\end{minipage}
+
+\textbf{}\\[1.0cm]
+
+\textbf{Author:.................................... "....." May   2011}\\[0.5cm]
+
+\textbf{Supervisor:............................... "....." May   2011}\\[0.5cm]
+
+\textbf{Professor:................................. "....." May   2011}\\[0.5cm]        
+
+\vfill
+
+% Bottom of the page
+{\large TARTU, 2011}
+
+\end{center}
+
+\end{titlepage}

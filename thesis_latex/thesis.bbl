@@ -1,0 +1,230 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{dumas2013fundamentals}
+M.~Dumas, M.~La~Rosa, J.~Mendling, H.~A. Reijers, et~al., Fundamentals of
+  business process management, Vol.~1, Springer, 2018.
+
+\bibitem{dumas2008business}
+M.~Dumas, M.~Reichert, M.-C. Shan, Business process management, Springer, 2008.
+
+\bibitem{weske2007business}
+M.~Weske, Business process management architectures, Business Process
+  Management: Concepts, Languages, Architectures (2007) 305--343.
+
+\bibitem{van2016data}
+W.~Van Der~Aalst, Data science in action, in: Process mining, Springer, 2016,
+  pp. 3--23.
+
+\bibitem{teinemaa2019outcome}
+I.~Teinemaa, M.~Dumas, M.~L. Rosa, F.~M. Maggi, Outcome-oriented predictive
+  process monitoring: Review and benchmark, ACM Transactions on Knowledge
+  Discovery from Data (TKDD) 13~(2) (2019) 1--57.
+
+\bibitem{senderovich2019knowledge}
+A.~Senderovich, C.~Di~Francescomarino, F.~M. Maggi, From knowledge-driven to
+  data-driven inter-case feature encoding in predictive process monitoring,
+  Information Systems 84 (2019) 255--264.
+
+\bibitem{prokhorenkova2018catboost}
+L.~Prokhorenkova, G.~Gusev, A.~Vorobev, A.~V. Dorogush, A.~Gulin, Catboost:
+  unbiased boosting with categorical features, in: Advances in neural
+  information processing systems, 2018, pp. 6638--6648.
+
+\bibitem{edwards1991discrete}
+T.~Edwards, Discrete wavelet transforms: Theory and implementation, Universidad
+  de (1991) 28--35.
+
+\bibitem{bergstra2013hyperopt}
+J.~Bergstra, D.~Yamins, D.~D. Cox, Hyperopt: A python library for optimizing
+  the hyperparameters of machine learning algorithms, in: Proceedings of the
+  12th Python in science conference, Citeseer, 2013, pp. 13--20.
+
+\bibitem{bradley1997use}
+A.~P. Bradley, The use of the area under the roc curve in the evaluation of
+  machine learning algorithms, Pattern recognition 30~(7) (1997) 1145--1159.
+
+\bibitem{platt1999probabilistic}
+J.~Platt, et~al., Probabilistic outputs for support vector machines and
+  comparisons to regularized likelihood methods, Advances in large margin
+  classifiers 10~(3) (1999) 61--74.
+
+\bibitem{xing2012early}
+Z.~Xing, J.~Pei, S.~Y. Philip, Early classification on time series, Knowledge
+  and information systems 31~(1) (2012) 105--127.
+
+\bibitem{mori2017reliable}
+U.~Mori, A.~Mendiburu, E.~Keogh, J.~A. Lozano, Reliable early classification of
+  time series based on discriminating the classes over time, Data mining and
+  knowledge discovery 31~(1) (2017) 233--263.
+
+\bibitem{santos2016literature}
+T.~Santos, R.~Kern, A literature survey of early time series classification and
+  deep learning., in: Sami@ iknow, 2016.
+
+\bibitem{xing2010brief}
+Z.~Xing, J.~Pei, E.~Keogh, A brief survey on sequence classification, ACM
+  Sigkdd Explorations Newsletter 12~(1) (2010) 40--48.
+
+\bibitem{leontjeva2016complex}
+A.~Leontjeva, R.~Conforti, C.~Di~Francescomarino, M.~Dumas, F.~M. Maggi,
+  Complex symbolic sequence encodings for predictive monitoring of business
+  processes, in: International Conference on Business Process Management,
+  Springer, 2016, pp. 297--313.
+
+\bibitem{di2017eye}
+C.~Di~Francescomarino, C.~Ghidini, F.~M. Maggi, G.~Petrucci, A.~Yeshchenko, An
+  eye into the future: leveraging a-priori knowledge in predictive business
+  process monitoring, in: International Conference on Business Process
+  Management, Springer, 2017, pp. 252--268.
+
+\bibitem{lin2015reliable}
+Y.-F. Lin, H.-H. Chen, V.~S. Tseng, J.~Pei, Reliable early classification on
+  multivariate time series with numerical and categorical attributes, in:
+  Pacific-Asia Conference on Knowledge Discovery and Data Mining, Springer,
+  2015, pp. 199--211.
+
+\bibitem{verenich2016complex}
+I.~Verenich, M.~Dumas, M.~La~Rosa, F.~M. Maggi, C.~Di~Francescomarino, Complex
+  symbolic sequence clustering and multiple classifiers for predictive process
+  monitoring, in: International Conference on Business Process Management,
+  Springer, 2016, pp. 218--229.
+
+\bibitem{de2016general}
+M.~De~Leoni, W.~M. van~der Aalst, M.~Dees, A general process mining framework
+  for correlating, predicting and clustering dynamic behavior based on event
+  logs, Information Systems 56 (2016) 235--257.
+
+\bibitem{maggi2014predictive}
+F.~M. Maggi, C.~Di~Francescomarino, M.~Dumas, C.~Ghidini, Predictive monitoring
+  of business processes, in: International conference on advanced information
+  systems engineering, Springer, 2014, pp. 457--472.
+
+\bibitem{di2017clustering}
+C.~Di~Francescomarino, M.~Dumas, F.~M. Maggi, I.~Teinemaa, Clustering-based
+  predictive process monitoring, IEEE transactions on services computing 12~(6)
+  (2017) 896--909.
+
+\bibitem{grigori2001improving}
+D.~Grigori, F.~Casati, U.~Dayal, M.-C. Shan, Improving business process quality
+  through exception understanding, prediction, and prevention, in: VLDB,
+  Vol.~1, 2001, pp. 159--168.
+
+\bibitem{conforti2015recommendation}
+R.~Conforti, M.~de~Leoni, M.~La~Rosa, W.~M. van~der Aalst, A.~H. ter Hofstede,
+  A recommendation system for predicting risks across multiple business process
+  instances, Decision Support Systems 69 (2015) 1--19.
+
+\bibitem{schwegmann2013method}
+B.~Schwegmann, M.~Matzner, C.~Janiesch, A method and tool for predictive
+  event-driven process analytics., in: Wirtschaftsinformatik, 2013, p.~46.
+
+\bibitem{lakshmanan2010predictive}
+G.~T. Lakshmanan, S.~Duan, P.~T. Keyser, F.~Curbera, R.~Khalaf, Predictive
+  analytics for semi-structured case oriented business processes, in:
+  International Conference on Business Process Management, Springer, 2010, pp.
+  640--651.
+
+\bibitem{van2012process}
+S.~Van Der~Spoel, M.~Van~Keulen, C.~Amrit, Process prediction in noisy data
+  sets: a case study in a dutch hospital, in: International Symposium on
+  Data-Driven Process Discovery and Analysis, Springer, 2012, pp. 60--83.
+
+\bibitem{van2010process}
+W.~M. Van~der Aalst, V.~Rubin, H.~Verbeek, B.~F. van Dongen, E.~Kindler, C.~W.
+  G{\"u}nther, Process mining: a two-step approach to balance between
+  underfitting and overfitting, Software \& Systems Modeling 9~(1) (2010) 87.
+
+\bibitem{ghattas2014improving}
+J.~Ghattas, P.~Soffer, M.~Peleg, Improving business process decision making
+  based on past experience, Decision Support Systems 59 (2014) 93--107.
+
+\bibitem{ke2017lightgbm}
+G.~Ke, Q.~Meng, T.~Finley, T.~Wang, W.~Chen, W.~Ma, Q.~Ye, T.-Y. Liu, Lightgbm:
+  A highly efficient gradient boosting decision tree, in: Advances in neural
+  information processing systems, 2017, pp. 3146--3154.
+
+\bibitem{weeks2003discrete}
+M.~Weeks, M.~Bayoumi, Discrete wavelet transform: architectures, design and
+  performance issues, Journal of VLSI signal processing systems for signal,
+  image and video technology 35~(2) (2003) 155--178.
+
+\bibitem{taymouri2019business}
+F.~Taymouri, M.~La~Rosa, J.~Carmona, Business process variant analysis based on
+  mutual fingerprints of event logs, arXiv preprint arXiv:1912.10598.
+
+\bibitem{strang1993introduction}
+G.~Strang, G.~Strang, G.~Strang, G.~Strang, Introduction to linear algebra,
+  Vol.~3, Wellesley-Cambridge Press Wellesley, MA, 1993.
+
+\bibitem{santoso1997power}
+S.~Santoso, E.~J. Powers, W.~M. Grady, Power quality disturbance data
+  compression using wavelet transform methods, IEEE Transactions on Power
+  Delivery 12~(3) (1997) 1250--1257.
+
+\bibitem{rao1976orthogonal}
+K.~Rao, N.~Ahmed, Orthogonal transforms for digital signal processing, in:
+  ICASSP'76. IEEE International Conference on Acoustics, Speech, and Signal
+  Processing, Vol.~1, IEEE, 1976, pp. 136--140.
+
+\bibitem{shumway2017time}
+R.~H. Shumway, D.~S. Stoffer, Time series analysis and its applications: with R
+  examples, Springer, 2017.
+
+\bibitem{aggarwal2015data}
+C.~C. Aggarwal, Data mining: the textbook, Springer, 2015.
+
+\bibitem{bakshi1999multiscale}
+B.~R. Bakshi, Multiscale analysis and modeling using wavelets, Journal of
+  chemometrics 13~(3-4) (1999) 415--434.
+
+\bibitem{pedregosa2011scikit}
+F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
+  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, et~al., Scikit-learn:
+  Machine learning in python, the Journal of machine Learning research 12
+  (2011) 2825--2830.
+
+\bibitem{4TU}
+4tu centre for research data, \url{https://researchdata.4tu.nl/}.
+
+\bibitem{pnueli1977temporal}
+A.~Pnueli, The temporal logic of programs, in: 18th Annual Symposium on
+  Foundations of Computer Science (sfcs 1977), IEEE, 1977, pp. 46--57.
+
+\bibitem{gunther2014xes}
+C.~W. G{\"u}nther, E.~Verbeek, Xes standard definition, Fluxicon Process
+  Laboratories (November 2009).
+
+\bibitem{kotsiantis2006data}
+S.~Kotsiantis, D.~Kanellopoulos, P.~Pintelas, Data preprocessing for supervised
+  leaning, International Journal of Computer Science 1~(2) (2006) 111--117.
+
+\bibitem{mitchell1997machine}
+T.~M. Mitchell, et~al., Machine learning (1997).
+
+\bibitem{rozumnyi2017dashboard}
+A.~Rozumnyi, A dashboard-based predictive process monitoring engine, Ph.D.
+  thesis, Master’s thesis. University of Tartu (2017).
+
+\bibitem{cudredata}
+P.~Cudre-Mauroux, P.~Ceravolo, D.~Ga{\v{s}}evic, Data-driven process discovery
+  and analysis.
+
+\bibitem{demvsar2006statistical}
+J.~Dem{\v{s}}ar, Statistical comparisons of classifiers over multiple data
+  sets, Journal of Machine learning research 7~(Jan) (2006) 1--30.
+
+\bibitem{lundberg2017unified}
+S.~M. Lundberg, S.-I. Lee, A unified approach to interpreting model
+  predictions, in: Advances in neural information processing systems, 2017, pp.
+  4765--4774.
+
+\bibitem{lundberg2018consistent}
+S.~M. Lundberg, G.~G. Erion, S.-I. Lee, Consistent individualized feature
+  attribution for tree ensembles, arXiv preprint arXiv:1802.03888.
+
+\end{thebibliography}

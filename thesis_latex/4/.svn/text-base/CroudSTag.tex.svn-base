@@ -1,0 +1,75 @@
+% this file is called up by thesis.tex
+% content in this file will be fed into the main document
+
+\section{CroudSTag: Social Group Formation with Facial Recognition and Mobile Cloud Services}
+The goal of the CroudSTag application is to let a person to keep in touch with people, who appear in a set of pictures, from his mobile. For example, consider a researcher who attends conferences around the world and has a set of pictures of the people with whom he had interacted at the event. The pictures are probably taken from his mobile and are stored on the cloud. The researcher later wants to create and keep connections with his acquaintances on the social network, to group them according to specific interests and to follow the groups directly from his mobile phone. The scenario can also be envisioned with any other type of the event or community that wants to keep its members in contact, something like alumni. However, for being a bit clear with the explanation, the rest of the paper is written as though it is for the researcher's case.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.65\textwidth]{4/figures/CroudSTag/MobileCloudGallery.png}
+\caption{Mobile Cloud Gallery application scenario}
+\label{fig:MobileCloudGallery}
+\end{figure}
+
+The CroudSTag application is realized as follows. The researcher uses the Mobile Cloud Gallery application, also developed by us, to take pictures and store them in multiple clouds. The researcher takes the picture using the mobile camera and chooses the cloud where he wants to upload the picture. Multiple clouds are considered, as the researcher may store the pictures in his private cloud (something like our SciCloud, a cloud based on Eucalyptus technology with Walrus storage) when in Europe and while traveling through US or Japan he may upload them to public clouds like Amazon Simple Storage Services (S3) or GoGrid. The scenario is shown in figure. The researcher can review his pictures, stored in any cloud, at any time, in any place.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.75\textwidth]{4/figures/CroudSTag/FaceRecognitionScenario.png}
+\caption{Screenshots of the CroudSTag usage scenario}
+\label{fig:FaceRecognitionScenario}
+\end{figure}
+
+Using CroudSTag application, the researcher can later select the pictures stored in the cloud and use them to detect and to recognize his acquaintances and contact them in Facebook.com. Before starting the facial recognition process the researcher logs into Facebook.com in the application to grant access to his content (pictures, friends and tags). After the researcher is logged in, he selects the pictures he wants to use for the process, by selecting the particular cloud. Once the cloud has been selected, the mobile sends the request and the face recognition process is started on the MCM (Mobile Cloud Middleware). Face recognition is performed based on SaaS like face.com. The service is explained in detail in the next section and MCM is discussed in detail in section 4. The request from the mobile is immediately followed by an acknowledgement from the MCM and the phone is free to be used in normal way. Meanwhile, the face recognition process is performed on the cloud and the mobile is notified about the results by displaying the recognized people in a list. The researcher then selects the persons one by one and posts a message with the invitation to join a social group in Facebook. The scenario is shown in detail in figure~\ref{fig:FaceRecognitionScenario}.
+
+
+\subsection{Cloud services employed in the application}
+
+To create the CroudSTag application, several cloud services are considered, such as facial recognition services from Face.com, Facebook applications and other cloud storage and processing services. Face.com is a technology company operating in the face recognition domain, and provides several SaaS from the cloud. It offers three basic solutions for facial detection: 1) \textit{PhotoFinder} which scans public photos in the network and suggests tags for the photos which are currently un-tagged. The aim of the application is to find pictures of a person in the network. 2) \textit{PhotoTagger} which lets people choose albums to scan for faces grouping the people recognized in batches called screenshots. Later, PhotoTagger suggests tags for the people present in the screenshots. This batch processing is a more efficient way to tag pictures from existing albums. 3) \textit{CelebrityFinder}, which scans pictures in Twitter looking for celebrities that have posted publicly.
+
+In May, 2010, Face.com released its API and officially supports languages such as PHP and JavaScript. The community also has developed client libraries for Python, C\#, Flash Action Script, Java and Ruby on Rails. The services for detection, recognition, and tagging are provided through its REST API; Server - http.api.face.com. The services are provided for free but with quota limitations. Face.com can also tag and recognize users from Facebook and Twitter, the two most popular social networks with billions of photos in their repositories. Face.com complies with Facebook and Twitter security policies and thus can use the credentials of the social networks. The recognition is performed on the public content in the network and the content owned by the user. It is also possible to have private sets of photos and tags, called name-spaces. However these private name-spaces need to be tagged and trained and thus reduce the number of people who can be recognized and also decreases the accuracy of the results. 
+
+The CroudSTag application also uses Facebook services to create the groups.  Facebook Applications are the channel provided by Facebook, to integrate the core Facebook platform technologies such as social plug-ins, the Graph API and Dialogs. Facebook also provides several SDKs to develop applications. The JavaScript and PHP SDKs are available for web content and the iOS and Android SDKs are available for mobile applications. The CroudSTag application uses Facebook Dialogs, which provide a consistant interface to display dialogs to users. These dialogs provide the interface to post messages in user's walls, send friend requests and applications requests. 
+
+The Graph API is the simple view to Facebook objects (people, photos, events and pages) and connections between each other. Every object inside Facebook has a unique ID and its information can be accessed through the Facebook public URL. The Graph is used to discover the relationships of one object with other objects. Relationships such as friends, events, groups, notes, albums, photos, tags, likes, etc. can be retrieved through the Graph API. 
+
+The CroudSTag application also uses the storage services from Amazon S3 and Walrus from SciCloud to store the pictures taken by the mobile phone, using native Amazon API and jets3t API, respectively. jets3t needs slight modification for handling the storage service of Walrus as it was originally meant from the community for accessing Amazon S3 services.
+
+\subsection{CroudSTag Performance analysis of the application}
+
+Once the CroudSTag application is developed, it was tested extensively for its performance. The performance model and the analysis are addressed here. figure~\ref{fig:timestampsCroudSTag} shows the sequence of activities that are performed during the execution of the application. Here, the total application duration i.e. the total mobile cloud service invocation time, $T_{mcs}$ is:
+
+\begin{equation}
+T_{mcs} \cong  T_{tr} + T_m + \Delta T_m + \sum_{i=1}^n (T_{{te}_i} + T_{c_i}) + T_{pn}  \label{eqn:mcs:mware: times}
+\end{equation}
+
+Where, $T_{tr}$ is the transmission time taken across the radio link for the invocation between the mobile phone and the MCM. The value includes the time taken to transmit the request to the cloud and the time taken to send the response back to the mobile. Apart from these values, several parameters also affect the transmission delays like the TCP packet loss, TCP acknowledgements, TCP congestion control  etc. So a true estimate of the transmission delays is not always possible. Alternatively, one can take the values several times and can consider the mean values for the analysis. $T_m$ is the time taken to process the request at the middleware. $\Delta T_m$ is the minute extra latency added to the performance of the MCM, as the mobile is immediately notified with the acknowledgement. $T_{te}$ is the transmission time across the Internet/Ethernet for the invocation between the middleware and the cloud. $T_c$ is the time taken to process the actual service at the cloud. This process is repeated several times in the CroudSTag application, as it is contacting different clouds like face.com, facebook.com, Amazon S3. Hence the sigma is considered in the equation. 
+
+\begin{figure}
+\centering
+\includegraphics[width=0.65\textwidth]{4/figures/CroudSTag/Timestamps.png}
+\caption{Mobile cloud service invocation cycle: Activities and timestamps}
+\label{fig:timestampsCroudSTag}
+\end{figure}
+
+Similarly, $T_{pn}$ represents the push notification time, which is the time taken to send the response of the mobile cloud service to the device via the AC2DM. While $T_{mcs}$ may seem a bit higher, the phone is rather free to continue with its tasks, so not much load on it. This is possible only due to the support for push notifications at the MCM. The mobile phone just sends the request and gets the acknowledgement back. Actual response from the cloud is sent to the mobile asynchronously. Thus the delay perceived at the mobile rather stays constant however big the $T_{mcs}$ may be. $\cong$ is considered in the equation as there are also other timestamps involved, like the client processing at the mobile phone. However, these values will be quite small and cannot be calculated exactly.
+
+To analyze the performance of the CroudSTag application, Amazon S3 storage services are used as the picture repository. 10 photos with an average of 5 faces per picture are stored in an S3 bucket. In S3 objects are stored in buckets. HTC desire phone, with a 5 megapixel color camera with auto focus and flash was considered for the analysis. It has a CPU speed of 1GHz, 576 MB of RAM and storage that can be extended up to 32GB. The application is developed based on the Android platform, compatible with Android 2.2 API or higher. Wifi connection was used to connect the mobile to the middleware. So, test cases were taken in a network with an upload rate of $\approx$ 1409 kbps and download rate of $\approx$ 3692 kbps, respectively. However, as mentioned already, estimating the true values of transmission capabilities achieved at a particular instance of time is not trivial. To counter the problem, we have taken the time stamps several times (5 times), across different parts of the day and the mean values are considered for the analysis.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.65\textwidth]{4/figures/CroudSTag/AnalysisChart.png}
+\caption{Timestamps of the application scenario}
+\label{fig:AnalysisChartCroudSTag}
+\end{figure}
+
+The timestamps are shown in figure~\ref{fig:AnalysisChartCroudSTag}. The value of $T_{tr} + \Delta T_m$ is quite short ($<$ 200 msec), which is acceptable from the user perspective. So, the user has the capability to start more data intensive tasks right after the last one or go with other general tasks, while the cloud services are being processed by the MCM. The total time taken for handling the cloud services at MCM, $T_{Cloud}$ (~$\sum_{i=1}^n (T_{{te}_i} + T_{c_i})$~), is also logical and higher as expected ($\approx$100 sec). The $T_{pn}$ varies depending on current traffic of the C2DM service and has an average of $\approx$22 seconds.
+
+%look for the information collected in the mobile monday ;)
+
+
+
+% ---------------------------------------------------------------------------
+%: ----------------------- end of thesis sub-document ------------------------
+% ---------------------------------------------------------------------------
+

@@ -1,0 +1,39 @@
+% this file is called up by thesis.tex
+% content in this file will be fed into the main document
+
+%: ----------------------- name of chapter  -------------------------
+\chapter{Case Studies} % top level followed by section, subsection
+
+
+
+
+This chapter describes two Android applications. Zompopo a mobile application that foster the provisioning of context-aware functions from the cloud and CroudSTag that enables the face recognition process from the handset for the creation of social groups in Facebook. 
+
+
+%: ----------------------- paths to graphics ------------------------
+
+% change according to folder and file names
+\ifpdf
+    \graphicspath{{X/figures/PNG/}{X/figures/PDF/}{X/figures/}}
+\else
+    \graphicspath{{X/figures/EPS/}{X/figures/}}
+\fi
+
+%: ----------------------- contents from here ------------------------
+
+
+%aqui va lo que hicimos en ELIKO
+
+\input{4/Zompopo}	
+\input{4/CroudSTag}
+
+
+\section{Summary}
+%look for the information collected in the mobile monday ;)
+
+
+
+% ---------------------------------------------------------------------------
+%: ----------------------- end of thesis sub-document ------------------------
+% ---------------------------------------------------------------------------
+

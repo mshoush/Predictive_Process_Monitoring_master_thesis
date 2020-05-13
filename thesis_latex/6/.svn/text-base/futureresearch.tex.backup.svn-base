@@ -1,0 +1,51 @@
+
+% this file is called up by thesis.tex
+% content in this file will be fed into the main document
+
+\chapter{Future Research Directions} % top level followed by section, subsection
+%Erlang,Mobile Enterprise, etc.
+
+While the thesis findings showed that it is feasible to combine cloud services from multiple clouds and to invoke those from a mobile phone without losing tolerable user interaction with a mobile device. Several intrigues arose which needs to be answered by future research in the mobile cloud domain. In the context of synchronization, a similar approach may be use for monitoring from the handset the progress of each task meanwhile is executing in the cloud. Currently, MCM manages synchronization using the same interface that Funambol uses for synchronize event tasks. Although, such strategy needs to provide highly scalability that cannot be achieved with the current Java implementaton due language limitations. Hence the re-implementation of the solution to more powerful concurrent languages like Erlang, it needs to be study.
+
+In terms of the mobile platform, the future research will be focus on extend the architecture to better suite the cellular network, by providing the access to the MCM via the XMPP protocol. XMPP is an open technology for real-time communication, which powers a wide range of applications including instant messaging, presence, multi-party chat, voice and video calls, collaboration, lightweight middleware and generalized routing of XML data.However, this requires the protocol to be implemented for the mobile platforms we have considered in the analysis; Android and iOS.
+
+
+
+ 
+
+
+
+
+
+
+
+
+% ----------------------- paths to graphics ------------------------
+
+% change according to folder and file names
+\ifpdf
+    \graphicspath{{8/figures/PNG/}{8/figures/PDF/}{8/figures/}}
+\else
+    \graphicspath{{8/figures/EPS/}{8/figures/}}
+\fi
+
+% ----------------------- contents from here ------------------------
+
+
+
+
+ 
+
+% ---------------------------------------------------------------------------
+%: ----------------------- end of thesis sub-document ------------------------
+% ---------------------------------------------------------------------------
+
+
+
+ 
+
+
+
+
+
+

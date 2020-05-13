@@ -1,0 +1,75 @@
+% this file is called up by thesis.tex
+% content in this file will be fed into the main document
+
+\chapter{State of the Art} % top level followed by section, subsection
+
+
+State of the art used in thesis is around.. cloud compyutibng and mobi8kel technologies… and sysnchronization and mobile cloud services. This section explaines them in detail…..
+
+Cloud computing is changing the style in which services are delivered over the Internet. A cloud service  is able to supply scalability according to the demand, to provide functionality without dealing the underlying technologies that conform the cloud, and to leverage the distributed physical infrastructure for using the cloud as a virtual pool of resources (pay as you need). 
+
+The integration of the cloud with mobile technologies has envisioned the Mobile Cloud Computing domain (MCC). This chapter introduces these developments from the literature and addresses the
+ motivation for the research in the MCC domain.
+
+
+% change according to folder and file names
+\ifpdf
+    \graphicspath{{X/figures/PNG/}{X/figures/PDF/}{X/figures/}}
+\else
+    \graphicspath{{X/figures/EPS/}{X/figures/}}
+\fi
+
+% ----------------------- State of the art ------------------------
+
+
+\section{Cloud computing}
+Cloud computing is a style of computing in which, typically, resources scalable on demand are provided “as a service (aaS)” over the Internet to users who need not have knowledge of, expertise in, or control over the cloud infrastructure that supports them. Cloud computing mainly forwards the idea of utility computing along with virtualization. In the utility computing model, consumers pay based on their usage of computing resources, just like the traditional utility services e.g. water, electricity, gas etc. Just like any utility services model cloud computing benefits from economies of scale. On the other hand, virtualization technologies partition hardware and thus provide flexible and scalable computing platforms. Servers in the cloud can be physical machines or virtual machines. A cloud computing platform dynamically provisions, configures, reconfigures, and de-provisions servers as requested.
+
+
+\begin{figure}
+\centering
+\includegraphics[width=0.75\textwidth]{2/figures/Cloud/cloudApproaches.png}
+\caption{Level of abstraction and layers of cloud services}
+\label{fig:cloudApproaches}
+\end{figure}
+
+Cloud services are provided on demand and at different levels. Figure \ref{fig:CloudServices} shows the layers of cloud services, in terms of level of abstraction. The provisioning of services can be at the Infrastructural level (IaaS) or Platform level (PaaS) or at the Software level (SaaS). In the IaaS, commodity computers, distributed across Internet, are used to perform parallel processing, distributed storage, indexing and mining of data. IaaS provides complete control over the operating system and the clients benefit from the computing resources like processing power and storage, e.g. Amazon EC2 \cite{Amazon:EC2}. Virtualization is the key technology behind realization of these services. PaaS mainly provides hosting environments for other applications. Clients can deploy the domain specific applications on these platforms, e.g. Google App Engine \cite{Google:AppEngine:Java}. These applications are in turn provided to the users as SaaS. SaaS are generally accessible from web browsers, e.g. Facebook. Web 2.0 is the main technology behind the realization of SaaS. However, the abstraction between the layers is not concrete and several of the examples can be argued for other layers.
+
+While there are several public clouds on the market, Google Apps (Google Mail, Docs, Sites, Calendar, etc), Google App Engine (provides elastic platform for Java and Python applications with some limitations) and Amazon EC2 are probably most known and widely used. Elastic Java Virtual Machine on Google App Engine allows developers to concentrate on creating functionality rather than bother about maintenance and system setup. Such sandboxing, however, places some restrictions on the allowed functionality \cite{Google:AppEngine:Java}. Amazon EC2 on the other hand allows full control over virtual machine, starting from the operating system. It is possible to select a suitable operating system, and platform (32 and 64 bit) from many available Amazon Machine Images (AMI) and several possible virtual machines, which differ in CPU power, memory and disk space. This functionality allows to freely select suitable technologies for any particular task. In case of EC2, price for the service depends on machine size, its uptime, and used bandwidth in and out of the cloud. Flexibility of EC2 environment and our existing Mobile Enterprise implementation were some of the reasons why EC2 was chosen for most of our experiments. 
+
+Moreover, there are free implementations of EC2 compatible cloud infrastructure e.g. Eucalyptus \cite{Euca:site}, that help in creating private clouds. Thus the cloud computing applications can initially be developed at the private clouds and later can be scaled to the public clouds. The setup is of great help for the research and academic communities, as the initial expenses of experiments can be reduced by great extent. Our research group is in the process of setting up a scientific computing cloud (SciCloud) on our clusters, using Eucalyptus technology. With this SciCloud \cite{SriramaETAL:SciCloud.10}, students and researchers can efficiently use the already existing resources of university computer networks, in solving computationally intensive scientific, mathematical, and academic problems. The project mainly targets the development of a framework, including models and methods for establishment, proper selection, state management (managing running state and data), auto scaling and interoperability of the private clouds. The preliminary results can be found at the project site %\cite{SciCloud:site}
+
+\section{Mobile technologies}
+Improvements in mobile devices, on hardware (embedded sensors, memory, power consumption, touchscreen, better ergonomic design, etc.), in software (more numerous and more sophisticated applications due to the release of iPhone~\cite{iphone:platform} and Android~\cite{android:platform} platforms) and in transmission (higher data transmission rates achieved with 3G and 4G technologies), have contributed towards having higher mobile penetration and better services provided to the customers. Also, those improvements have enabled the mobiles to become a source of information, to understand the user in multiple ways (interaction, movement, location etc.). Smart phones are rich of a variety of sensors that enable sensing the user environment for providing adaptability in real-time. 
+
+Accelerometer: Accelerometer is an embedded sensor within the mobile phone that is used for the sensing the acceleration of the device in different axes (generally 3). The accelerometer can be used for providing multiple services, for example, vendors are using the accelerometer as a security mechanism for securing the hard disk when the device experiences a free fall. The study has used the sensor in one of the applications, Zompopo, which is explained in detail in section XXX.
+		
+Magnetic Field: Similar to Accelerometer, this sensor can also sense movement. It is able to sense changes in the magnetic field of the objects. Since the magnetic field shows variation that are related with movements, this kind of sensor may be used for collecting precise information such distance, direction etc.
+
+Apart from the sensors mobile devices also come with other accessories like the built in camera, support for GPS etc. 
+
+%improve to a para..
+
+\subsection{Mobile platforms}
+Mobile applications are developed for a diversity of mobile platform including Symbian (Nokia), Windows Mobile (Microsoft), Blackberry (Sony Ericsson) etc. Recently, Symbian have been replaced from the Market for Windows Mobile since the popularity of this decrease in the mobile market. 
+Since the introduction of iOs (2007) and Android (2008) as mobile platforms for the smartphones; a huge popularity has been growing around these two operating systems as basis for the development of mobile applications. Apple released iOs as platform for their own device (iPhone). Similary, Android was released as open source in the consortium of the Open Handset Alliance. Currently, Android is supported by vendors such as Samsung, Sony Ericcson, HTC, Toshiba, LG among others. 
+
+\subsubsection{Android Platform}
+
+Its a mobile platform released by the Open Hanset Alliance that consist in a software stack composed by an operating system, middleware and key applications []. The development of software is tied to the use of the Delvik Virtual Machine (Android Runtime) that enables the use of Java as programming language. Most of the libraries which are compatible with a JDK, can be deployed within Android. However, Some of them may present issues concerning compatibility with the compiler and thus, are unable to be executed. For example typica API presents such integration problems.
+
+Android architecture consists of multiple layers that relies on a Linux kernel as shown in figure. The application layer includes a set default applications within the operating system such calendar, contacts, etc. Those applications can be synchronized with the cloud using Google sync. The application framework consist in predetermined services for managing device resources as hardware (sensors, screen, etc ), software (alarms, background services )  and the integration with external sources (location information systems, AC2DM notification service, etc). 
+Within the set of libraries, Android incorporate those that provide real-time performance. For example a light version of SQLite database is include.
+
+\subsubsection{Android Platform}
+
+
+
+\section{Mobile cloud services}
+
+
+
+
+% ---------------------------------------------------------------------------
+% ----------------------- end of thesis sub-document ------------------------
+% ---------------------------------------------------------------------------
