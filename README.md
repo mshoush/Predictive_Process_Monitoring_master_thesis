@@ -9,7 +9,7 @@ This repository and our contributions are organized as follows:
 # Dataset: 
 You need to download below datasets and modify the path in `dataset_confs.py` script. 
 
-* [Labeled datasets](https://drive.google.com/drive/folders/1ut9HR5I4Bvo96WcG09Boex_XfC6rJujZ?usp=sharing)
+* [Labelled datasets](https://drive.google.com/drive/folders/1ut9HR5I4Bvo96WcG09Boex_XfC6rJujZ?usp=sharing)
 * [Inter-case features datasets](https://drive.google.com/drive/folders/1E26I981qyMNj1laTNKoCCC_PneGzlT5R?usp=sharing)
 
 
