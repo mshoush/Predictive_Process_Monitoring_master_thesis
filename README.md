@@ -2,14 +2,14 @@
 This project is an extension to work done by [irhete/predictive-monitoring-thesis ](https://github.com/irhete/predictive-monitoring-thesis) as a master thesis at the University of Tartu, Estonia. In this thesis, we introduced three different methods to improve the currently existing techniques of outcome-oriented predictive process monitoring. 
 
 This repository and our contributions are organized as follows:
-* **Contribution 1:** Adding CatBoost mehtod to outcome-orinted PPM techniques. 
-* **Contribution 2:** Adding a new complex sequence encoding on the basis of discrete wavelet transformation and neural networks. 
-* **Contribution 3:** Addding Inter-case features to the experiemnts. 
+* **Contribution 1:** Adding CatBoost method to outcome-oriented PPM techniques. 
+* **Contribution 2:** Adding a new complex sequence encoding technique on the basis of discrete wavelet transform and neural networks. 
+* **Contribution 3:** Adding Inter-case features to the experiments.  
 
 # Dataset: 
 You need to download below datasets and modify the path in `dataset_confs.py` script. 
 
-* [Labeled datasets](https://drive.google.com/drive/folders/1ut9HR5I4Bvo96WcG09Boex_XfC6rJujZ?usp=sharing)
+* [Labelled datasets](https://drive.google.com/drive/folders/1ut9HR5I4Bvo96WcG09Boex_XfC6rJujZ?usp=sharing)
 * [Inter-case features datasets](https://drive.google.com/drive/folders/1E26I981qyMNj1laTNKoCCC_PneGzlT5R?usp=sharing)
 
 
