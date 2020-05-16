@@ -6,14 +6,14 @@
 
 In Chapter \ref{ch3}, we recognized three essential gaps in the related work. Firstly, the potential of using new machine learning algorithms that handle categorical variables, specifically  \textit{CatBoost}, to predict the outcome in the context of business processes has not been explored. Then, Exploring different sequence encoding methods to obtain a lossless encoding of the feature vector, in particular, \textit{Discrete Wavelet Transformation.} Finally, studying the potential of using \textit{inter-case} features since in real-life systems the outcome does not depend on the running case only, but it depends on features that come from the concurrent execution of all business cases. 
 
-This Chapter will clarify the subsequent research questions:
+This Chapter will clarify the subsequent research question:
 
 
 \begin{itemize}[itemindent=0em]
-	\item[\textbf{RQ4}] How to improve the current outcome-oriented predictive process monitoring approaches in terms of performance?	
+	\item[\textbf{RQ1}] How to improve the current outcome-oriented predictive process monitoring approaches in terms of performance?	
 \end{itemize}
 
-To answer RQ4, we propose solutions to the mentioned three gaps, starting with CatBoost in section \ref{catb}, followed by wavelet transformation in section \ref{dwt}, and ending with inter-case features in section \ref{inter}.
+To answer RQ1, we propose solutions to the mentioned three gaps, starting with CatBoost in section \ref{catb}, followed by wavelet transformation in section \ref{dwt}, and ending with inter-case features in section \ref{inter}.
 
 
 %: ----------------------- paths to graphics ------------------------
@@ -43,7 +43,7 @@ To answer RQ4, we propose solutions to the mentioned three gaps, starting with C
 
 \textit{Tree structure}. LGBM builds trees in a greedy fashion node by node and using this way; we can get a very deep, not symmetric tree \cite{ke2017lightgbm}. XGBoost builds trees layer by layer and then prunes them, which means it does not go deeper, and the resulting trees are not symmetric that lead to over-fitting. CatBoost uses full binary trees that are symmetric. This type of tree gives more simple predictors which means the algorithm is less go into over-fitting, and it also helps the algorithm to be more reliable to parameter changes.
 
-\textit{Categorical handling.} For categorical features, current algorithms either do not work with them at all such as XGBoost or deal with them in a not optimal way like LGBM, and the most common method to tackle categorical features is to use one-hot encoding. CatBoost handles categorical features in a very efficient way. It does a set of things w.r.t categorical features: (\romannumeral 1) The first and most important thing in terms of quality is \textit{statistics based on category and category plus label value.} In this step, it calculates a new set of numerical features based on the current existing categorical ones. Numerical features are calculated based on statistics related to category, e.g. the number of appearances of categories and at the same time based on label value, e.g. the average label value among objects that have the same category. For a binary classification it is the probability of having success in the given category for example (see figure \ref{fig:cat1}) the new numerical feature value based on those statistics for object $i$ is $P(1 \mid A) = \frac{3}{4}$, but this method leads to over-fitting. One way to overcome this problem, for each object, e.g. $i$ averages are calculated differently in particular, for object number $i$ objects that are before it is used to calculate average statistics and label of object $i$ is never used during the calculation. For example, the object $i$ has three objects before the given one at index $4$, and the generated numerical feature is equal to $\frac{2}{3}$.  If an object is the first one in the data set when we have zero by zero, then the \textit{prior} value is needed, and for each feature, different priors are selected internally to make better qualities \cite{prokhorenkova2018catboost}; (\romannumeral 2) Usage of several permutations to choose tree structure; (\romannumeral 3) Greedy constructed feature combinations, i.e. combine categorical features, e.g. \textit{colour and animal} features become after combining them \textit{blue\_cat, or red\_dog} and in many cases these combinations are meaningful; (\romannumeral 4) One hot encoding that works well if the data set has a small number of categories, e.g. gender (male or female).
+\textit{Categorical handling.} For categorical features, current algorithms either do not work with them at all such as XGBoost or deal with them in a not optimal way like LGBM, and the most common method to tackle categorical features is to use one-hot encoding. CatBoost handles categorical features in a very efficient way. It does a set of things w.r.t categorical features: (\romannumeral 1) The first and most important thing in terms of quality is \textit{statistics based on category and category plus label value.} In this step, it calculates a new set of numerical features based on the current existing categorical ones. Numerical features are calculated based on statistics related to category, e.g. the number of appearances of categories and at the same time based on label value, e.g. the average label value among objects that have the same category. For a binary classification it is the probability of having success in the given category for example (see figure \ref{fig:cat1}) the new numerical feature value based on those statistics for object $i$ is $P(1 \mid A) = \frac{3}{4}$, but this method leads to over-fitting. One way to overcome this problem, for each object, e.g. $i$ averages are calculated differently in particular, for object number $i$ objects that are before it, is used to calculate average statistics, and label of object $i$ is never used during the calculation. For example, the object $i$ has three objects before the given one at index $4$, and the generated numerical feature is equal to $\frac{2}{3}$.  If an object is the first one in the data set when we have zero by zero, then the \textit{prior} value is needed, and for each feature, different priors are selected internally to make better qualities \cite{prokhorenkova2018catboost}; (\romannumeral 2) Usage of several permutations to choose tree structure; (\romannumeral 3) Greedy constructed feature combinations, i.e. combine categorical features, e.g. \textit{colour and animal} features become after combining them \textit{blue\_cat, or red\_dog} and in many cases these combinations are meaningful; (\romannumeral 4) One hot encoding that works well if the data set has a small number of categories, e.g. gender (male or female).
 
 \begin{figure}[htb]
 	\begin{center}
@@ -69,7 +69,7 @@ leafValue & = \sum_{i}^{doc} \frac{g(approx(i), target(i)}{doc in the past}
 \end{split}
 \end{equation}
 
-Following the general work-flow of outcome-oriented predictive process monitoring in Chapter \ref{ch3} section \ref{wf}, we changed \textit{sequence encoding} methods to keep all categorical features \quotes{as is} to let CatBoost algorithm tackle them during the learning process. Figure \ref{fig:cat_enc} shows the changes to all encoding methods w.r.t feature extraction.
+Following the general workflow of outcome-oriented predictive process monitoring in Chapter \ref{ch3} section \ref{wf}, we changed \textit{sequence encoding} methods to keep all categorical features \quotes{as is} to let CatBoost algorithm tackle them during the learning process. Figure \ref{fig:cat_enc} shows the changes to all encoding methods w.r.t feature extraction.
 
 \begin{figure}[htb]
 	\begin{center}
@@ -88,7 +88,7 @@ Each case in the event log carries information about events that describe its \t
 \begin{figure}[htb]
 	\begin{center}
 		\resizebox{10cm}{!}{\includegraphics{images/general/dwt1.pdf}}
-		\caption[Wavelet complex Sequence encoding]{Our approach to build a new complex sequence encoding method based on discrete wavelet transformation (DWT) and autoencoder neural network.}
+		\caption[Wavelet complex Sequence encoding]{Our approach of building a new complex sequence encoding method based on discrete wavelet transformation (DWT) and autoencoder neural network.}
 		\label{fig:dwt1}
 	\end{center}
 \end{figure}
@@ -176,7 +176,7 @@ To encode event log using this approach into a feature vector we do three steps 
 
 
 \begin{definition}{\textit{\textbf{Vectorization}}} \label{vect}
- we define function $V: B \to c$, that maps all time series into the relative \textit{wavelet coefficients}  where $B_i \in \{0,1\}$.Formally, $c = T^{-1} \cdot B$, where $T^{-1}$ is the inverse of Haar transform. Such as:
+ we define function $V: B \to c$, that maps all time series into the relative \textit{wavelet coefficients}  where $B_i \in \{0,1\}$. Formally, $c = T^{-1} \cdot B$, where $T^{-1}$ is the inverse of Haar transform. Such as:
  
  \begin{center}
  	$\textbf{c}^{(i)} = \textbf{T}^{-1} \cdot s^{(i)}$\\
@@ -240,12 +240,12 @@ To encode event log using this approach into a feature vector we do three steps 
  	\end{center}
 \end{definition}
  
-Following the above definitions, we built a new complex sequence encoding method based on discrete wavelet transformation and time-series encoding by mapping each event log into a feature vector matrix whose rows are related to wavelet coefficients for each trace in the event log. This encoding method has two drawbacks compared to other encoding methods (see Chapter \ref{ch3}): (\romannumeral 1) The time complexity in the worst case is $O(n^3)$ w.r.t the largest business case in the event log. Accordingly, for large datasets, this encoding method takes much time just to encode historical events into a numerical feature vector; (\romannumeral 2) secondly, is the generated feature matrix is a \textit{highly sparse multidimensional matrix}. To overcome this drawback, we can select a subset from the feature matrix based on the importance or apply one of the dimension reduction techniques.  We decided to use an \textit{auto-encoder} neural network to reduce the dimensionality of the feature matrix and to retain all information of the historical event logs. 
+Following the above definitions, we built a new complex sequence encoding method based on discrete wavelet transformation and time-series encoding by mapping each event log into a feature vector matrix whose rows are related to wavelet coefficients for each trace in the event log. This encoding method has two drawbacks compared to other encoding methods (see Chapter \ref{ch3}): (\romannumeral 1) The time complexity in the worst case is $O(n^3)$ w.r.t the largest business case in the event log. Accordingly, for large datasets, this encoding method takes much time just to encode historical events into a numerical feature vector; (\romannumeral 2) secondly, the generated feature matrix is a \textit{highly sparse multidimensional matrix}. To overcome the latter drawback, we can select a subset from the feature matrix based on the importance or apply one of the dimension reduction techniques.  We decided to use an \textit{auto-encoder} neural network to reduce the dimensionality of the feature matrix and to retain all information of the historical event logs. 
 
 \textit{Auto-encoder} is an unsupervised method that tries to remove noise or unnecessary information from the original data. The idea of a neural network encoder is to compress the information that exists in the feature matrix with high dimensional space into a low dimensional space.  After encoding each trace in the original event log using $DWT$, we pass it to the auto-encoder method (see figure \ref{fig:dwt1}) that compresses it into a lower dimension. 
 
 
-Following the general work-flow of outcome-oriented predictive process monitoring in Chapter \ref{ch3} section \ref{wf}, we changed \textit{sequence encoding} methods to add our proposed complex sequence encoding method using \textit{$DWT$, and auto-encoders} Figure \ref{fig:dwt5} shows the changes to all encoding methods w.r.t Sequence encoding.
+Following the general workflow of outcome-oriented predictive process monitoring in Chapter \ref{ch3} section \ref{wf}, we changed \textit{sequence encoding} methods to add our proposed complex sequence encoding method using \textit{$DWT$, and auto-encoders} Figure \ref{fig:dwt5} shows the changes to all encoding methods w.r.t Sequence encoding.
 
 \begin{figure}[htb]
 	\begin{center}
@@ -260,7 +260,7 @@ In recent predictive process monitoring methods, the outcome mainly comes from t
 
 In \cite{senderovich2019knowledge} they introduced a two-dimensional method for feature encoding, where the first dimension depends on the intra-case features, and the second one relies on the inter-case features. For the inter-case dimension, they proposed two different approaches: (\romannumeral 1) \textit{A knowledge-driven encoding (KDE)}, that relies on the previous knowledge about cases; (\romannumeral 2) \textit{A data-driven encoding (DDE)}, that defines cases automatically from event logs employing proximity metrics. 
 
-In this thesis, we propose three different categories of inter-case features (see figure \ref{fig:inter1}): (\romannumeral 1) \textit{Workload} features; (\romannumeral 2) \textit{Demand intensity} features; (\romannumeral 3) \textit{Temporal contextual} features with an experimental evaluation executed on 20 event logs.
+In this thesis, we propose three different categories of inter-case features (see figure \ref{fig:inter1}): (\romannumeral 1) \textit{Workload}; (\romannumeral 2) \textit{Demand intensity}; (\romannumeral 3) \textit{Temporal context} with an experimental evaluation executed on 20 event logs.
 
 \begin{figure}[htb]
 	\begin{center}
@@ -273,15 +273,15 @@ In this thesis, we propose three different categories of inter-case features (se
 
 \textit{Workload features.} To improve the overall performance of business processes, we need to maximize the utilization of resources that we have in our system. Accordingly, monitoring and managing workload is crucial to any business process. In this context, we define three different inter-case features that capture information about the workload. (\romannumeral 1) The number of business cases that have started and not finished; (\romannumeral 2) The number of activities that happened in the last $x$ minutes or hour; (\romannumeral 3) Let $C$ be an ongoing case, and  $e_c$ be the last event observed in $C$  we define an inter-case feature that captures information about the number of other ongoing cases where the last event is $e_c$.
 
-\textit{Demand intensity.} The purpose of demand intensity analysis is demand prediction, and therefore, in terms of determining a proper resource to work on a specific action or activity, we need to monitor the intensity of business process creation and completion.   to address this point, we define tow different features that capture information about the request intensity. (\romannumeral 1) \textit{Case creation intensity} that carries information about How many new cases were created since the current case started (divided by the number of seconds since the current case was created). (\romannumeral 2) \textit{Case completion intensity} on the other hand capture information about how many cases have completed since this case was created divided by the number of seconds since the current case was created.
+\textit{Demand intensity.} The purpose of demand intensity analysis is demand prediction, and therefore, in terms of determining a proper resource to work on a specific action or activity, we need to monitor the intensity of business process creation and completion.   to address this point, we define tow different features that capture information about the request intensity. (\romannumeral 1) \textit{Case creation intensity} that carries information about How many new cases were created since the current case started (divided by the number of seconds since the current case was created). (\romannumeral 2) \textit{Case completion intensity}, on the other hand, capture information about how many cases have completed since this case was created divided by the number of seconds since the current case was created.
 
 
-\textit{Temporal contextual} Temporal information extraction has grown in the area of outcome-oriented PPM, and it is meant to capture circadian cycles, i.e. current time's hour of the day $(0-23)$, and day of the week when the last event in the current case occurred $(1-7)$. In this context, we defined four different inter-case features: (\romannumeral 1) Hour of the day; (\romannumeral 2) Day of the week; (\romannumeral 3) Day of the month; (\romannumeral 4) Month of the year; 
+\textit{Temporal context} Temporal information extraction has grown in the area of outcome-oriented PPM, and it is meant to capture circadian cycles, i.e. current time's hour of the day $(0-23)$, and day of the week when the last event in the current case occurred $(1-7)$. In this context, we defined four different inter-case features: (\romannumeral 1) Hour of the day; (\romannumeral 2) Day of the week; (\romannumeral 3) Day of the month; (\romannumeral 4) Month of the year; 
 
 
 
 \section{Summary}
-This Chapter answer RQ4 by giving a complete description of our three different proposed approaches to improve the outcome-oriented predictive process monitoring tasks. In the next Chapter, we start by setting experiments to evaluate proposed methods in comparison to currently existing techniques. 
+This Chapter addressed RQ1 by giving a complete description of our three different proposed approaches to improve the outcome-oriented predictive process monitoring tasks. In the next Chapter, we start by setting experiments to evaluate proposed methods in comparison to currently existing techniques. 
 
 
 

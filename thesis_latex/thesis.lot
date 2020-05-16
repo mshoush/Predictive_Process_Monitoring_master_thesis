@@ -4,41 +4,41 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Event logs (Datasets) characteristics\relax }}{42}{table.5.1}
-\contentsline {table}{\numberline {5.2}{\ignorespaces Hyper-parameter optimization using TPE\relax }}{46}{table.5.2}
-\contentsline {table}{\numberline {5.3}{\ignorespaces Overall AUC (F-score) for \textbf {CatBoost}\relax }}{49}{table.5.3}
-\contentsline {table}{\numberline {5.4}{\ignorespaces Bucketing and sequence encoding methods\relax }}{55}{table.5.4}
-\contentsline {table}{\numberline {5.5}{\ignorespaces Overall AUC (F-score) for \textbf {Wavelet plus CatBoost}\relax }}{56}{table.5.5}
-\contentsline {table}{\numberline {5.6}{\ignorespaces Overall AUC (F-score) for \textbf {CatBoost plus Inter-case features}\relax }}{62}{table.5.6}
-\contentsline {table}{\numberline {5.7}{\ignorespaces Bucketing and sequence encoding methods after adding inter-case features.\relax }}{64}{table.5.7}
-\contentsline {table}{\numberline {5.8}{\ignorespaces Execution times for \textbf {CatBoost}\relax }}{74}{table.5.8}
-\contentsline {table}{\numberline {5.9}{\ignorespaces Execution times for \textbf {Wavelet plus CatBoost}\relax }}{76}{table.5.9}
-\contentsline {table}{\numberline {5.10}{\ignorespaces Execution times for \textbf {inter-case features plus CatBoost}\relax }}{78}{table.5.10}
-\contentsline {table}{\numberline {5.11}{\ignorespaces Results summary}}{79}{table.5.11}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Event logs (Datasets) characteristics\relax }}{44}{table.5.1}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Hyper-parameter optimization using TPE\relax }}{48}{table.5.2}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Overall AUC (F-score) for \textbf {CatBoost}\relax }}{51}{table.5.3}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Bucketing and sequence encoding methods\relax }}{57}{table.5.4}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Overall AUC (F-score) for \textbf {Wavelet plus CatBoost}\relax }}{58}{table.5.5}
+\contentsline {table}{\numberline {5.6}{\ignorespaces Overall AUC (F-score) for \textbf {CatBoost plus Inter-case features}\relax }}{64}{table.5.6}
+\contentsline {table}{\numberline {5.7}{\ignorespaces Bucketing and sequence encoding methods after adding inter-case features.\relax }}{66}{table.5.7}
+\contentsline {table}{\numberline {5.8}{\ignorespaces Execution times for \textbf {CatBoost}\relax }}{76}{table.5.8}
+\contentsline {table}{\numberline {5.9}{\ignorespaces Execution times for \textbf {Wavelet plus CatBoost}\relax }}{78}{table.5.9}
+\contentsline {table}{\numberline {5.10}{\ignorespaces Execution times for \textbf {inter-case features plus CatBoost}\relax }}{80}{table.5.10}
+\contentsline {table}{\numberline {5.11}{\ignorespaces Results summary}}{81}{table.5.11}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {B.1}{\ignorespaces Overall AUC (F-score) for \textbf {XGBoost}\relax }}{97}{table.B.1}
-\contentsline {table}{\numberline {B.2}{\ignorespaces Overall AUC (F-score) for \textbf {Logit}\relax }}{98}{table.B.2}
-\contentsline {table}{\numberline {B.3}{\ignorespaces Overall AUC (F-score) for \textbf {RF}\relax }}{99}{table.B.3}
-\contentsline {table}{\numberline {B.4}{\ignorespaces Overall AUC (F-score) for \textbf {SVM}\relax }}{100}{table.B.4}
-\contentsline {table}{\numberline {B.5}{\ignorespaces Execution time for \textbf {XGBoost}\relax }}{101}{table.B.5}
-\contentsline {table}{\numberline {B.6}{\ignorespaces Execution time for \textbf {Logit}\relax }}{102}{table.B.6}
-\contentsline {table}{\numberline {B.7}{\ignorespaces Execution time for \textbf {RF}\relax }}{103}{table.B.7}
-\contentsline {table}{\numberline {B.8}{\ignorespaces Execution time for \textbf {SVM}\relax }}{104}{table.B.8}
-\contentsline {table}{\numberline {B.9}{\ignorespaces Overall AUC (F-score) for \textbf {Wavelet plus XGBoost}\relax }}{117}{table.B.9}
-\contentsline {table}{\numberline {B.10}{\ignorespaces Overall AUC (F-score) for \textbf {Wavelet plus Logit}\relax }}{118}{table.B.10}
-\contentsline {table}{\numberline {B.11}{\ignorespaces Overall AUC (F-score) for \textbf {Wavelet plus RF}\relax }}{119}{table.B.11}
-\contentsline {table}{\numberline {B.12}{\ignorespaces Overall AUC (F-score) for \textbf {Wavelet plus SVM}\relax }}{120}{table.B.12}
-\contentsline {table}{\numberline {B.13}{\ignorespaces Execution times for \textbf {Wavelet plus XGBoost}\relax }}{121}{table.B.13}
-\contentsline {table}{\numberline {B.14}{\ignorespaces Execution times for \textbf {Wavelet plus RF}\relax }}{122}{table.B.14}
-\contentsline {table}{\numberline {B.15}{\ignorespaces Execution times for \textbf {Wavelet plus Logit}\relax }}{126}{table.B.15}
-\contentsline {table}{\numberline {B.16}{\ignorespaces Execution times for \textbf {Wavelet plus SVM}\relax }}{127}{table.B.16}
-\contentsline {table}{\numberline {B.17}{\ignorespaces Overall AUC (F-score) for \textbf {XGBoost plus Inter-case features}\relax }}{137}{table.B.17}
-\contentsline {table}{\numberline {B.18}{\ignorespaces Overall AUC (F-score) for \textbf {RF plus Inter-case features}\relax }}{138}{table.B.18}
-\contentsline {table}{\numberline {B.19}{\ignorespaces Overall AUC (F-score) for \textbf {Logit plus Inter-case features}\relax }}{139}{table.B.19}
-\contentsline {table}{\numberline {B.20}{\ignorespaces Overall AUC (F-score) for \textbf {SVM plus Inter-case features}\relax }}{140}{table.B.20}
-\contentsline {table}{\numberline {B.21}{\ignorespaces Execution times for \textbf {inter-case features plus XGBoost}\relax }}{141}{table.B.21}
-\contentsline {table}{\numberline {B.22}{\ignorespaces Execution times for \textbf {inter-case features plus Logit}\relax }}{142}{table.B.22}
-\contentsline {table}{\numberline {B.23}{\ignorespaces Execution times for \textbf {inter-case features plus RF}\relax }}{143}{table.B.23}
-\contentsline {table}{\numberline {B.24}{\ignorespaces Execution times for \textbf {inter-case features plus SVM}\relax }}{144}{table.B.24}
+\contentsline {table}{\numberline {B.1}{\ignorespaces Overall AUC (F-score) for \textbf {XGBoost}\relax }}{99}{table.B.1}
+\contentsline {table}{\numberline {B.2}{\ignorespaces Overall AUC (F-score) for \textbf {Logit}\relax }}{100}{table.B.2}
+\contentsline {table}{\numberline {B.3}{\ignorespaces Overall AUC (F-score) for \textbf {RF}\relax }}{101}{table.B.3}
+\contentsline {table}{\numberline {B.4}{\ignorespaces Overall AUC (F-score) for \textbf {SVM}\relax }}{102}{table.B.4}
+\contentsline {table}{\numberline {B.5}{\ignorespaces Execution time for \textbf {XGBoost}\relax }}{103}{table.B.5}
+\contentsline {table}{\numberline {B.6}{\ignorespaces Execution time for \textbf {Logit}\relax }}{104}{table.B.6}
+\contentsline {table}{\numberline {B.7}{\ignorespaces Execution time for \textbf {RF}\relax }}{105}{table.B.7}
+\contentsline {table}{\numberline {B.8}{\ignorespaces Execution time for \textbf {SVM}\relax }}{106}{table.B.8}
+\contentsline {table}{\numberline {B.9}{\ignorespaces Overall AUC (F-score) for \textbf {Wavelet plus XGBoost}\relax }}{119}{table.B.9}
+\contentsline {table}{\numberline {B.10}{\ignorespaces Overall AUC (F-score) for \textbf {Wavelet plus Logit}\relax }}{120}{table.B.10}
+\contentsline {table}{\numberline {B.11}{\ignorespaces Overall AUC (F-score) for \textbf {Wavelet plus RF}\relax }}{121}{table.B.11}
+\contentsline {table}{\numberline {B.12}{\ignorespaces Overall AUC (F-score) for \textbf {Wavelet plus SVM}\relax }}{122}{table.B.12}
+\contentsline {table}{\numberline {B.13}{\ignorespaces Execution times for \textbf {Wavelet plus XGBoost}\relax }}{123}{table.B.13}
+\contentsline {table}{\numberline {B.14}{\ignorespaces Execution times for \textbf {Wavelet plus RF}\relax }}{124}{table.B.14}
+\contentsline {table}{\numberline {B.15}{\ignorespaces Execution times for \textbf {Wavelet plus Logit}\relax }}{128}{table.B.15}
+\contentsline {table}{\numberline {B.16}{\ignorespaces Execution times for \textbf {Wavelet plus SVM}\relax }}{129}{table.B.16}
+\contentsline {table}{\numberline {B.17}{\ignorespaces Overall AUC (F-score) for \textbf {XGBoost plus Inter-case features}\relax }}{139}{table.B.17}
+\contentsline {table}{\numberline {B.18}{\ignorespaces Overall AUC (F-score) for \textbf {RF plus Inter-case features}\relax }}{140}{table.B.18}
+\contentsline {table}{\numberline {B.19}{\ignorespaces Overall AUC (F-score) for \textbf {Logit plus Inter-case features}\relax }}{141}{table.B.19}
+\contentsline {table}{\numberline {B.20}{\ignorespaces Overall AUC (F-score) for \textbf {SVM plus Inter-case features}\relax }}{142}{table.B.20}
+\contentsline {table}{\numberline {B.21}{\ignorespaces Execution times for \textbf {inter-case features plus XGBoost}\relax }}{143}{table.B.21}
+\contentsline {table}{\numberline {B.22}{\ignorespaces Execution times for \textbf {inter-case features plus Logit}\relax }}{144}{table.B.22}
+\contentsline {table}{\numberline {B.23}{\ignorespaces Execution times for \textbf {inter-case features plus RF}\relax }}{145}{table.B.23}
+\contentsline {table}{\numberline {B.24}{\ignorespaces Execution times for \textbf {inter-case features plus SVM}\relax }}{146}{table.B.24}

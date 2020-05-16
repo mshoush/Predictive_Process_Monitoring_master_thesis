@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99991 (TeX Live 2014) (preloaded format=xelatex 2019.3.30)  12 MAY 2020 18:53
+This is XeTeX, Version 3.14159265-2.6-0.99991 (TeX Live 2014) (preloaded format=xelatex 2019.3.30)  16 MAY 2020 00:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -822,12 +822,12 @@ LaTeX Info: Redefining \nameref on input line 123.
 \openout2 = `title_page/stardard_page.aux'.
 
  (./title_page/stardard_page.tex
-LaTeX Font Info:    Try loading font information for U+msa on input line 45.
+LaTeX Font Info:    Try loading font information for U+msa on input line 50.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 45.
+LaTeX Font Info:    Try loading font information for U+msb on input line 50.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -849,14 +849,9 @@ File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
 
 
 ]
-Missing character: There is no ä in font cmbx12!
-Missing character: There is no ä in font cmbx12!
-Missing character: There is no ä in font cmr10!
 Missing character: There is no ü in font cmr10!
 Missing character: There is no ä in font cmr10!
-Missing character: There is no ö in font cmr10!
-Missing character: There is no ö in font cmr10!
-Missing character: There is no ü in font cmr10!
+Missing character: There is no ä in font cmr10!
  [3]) (./thesis.toc [4
 \FN@pp@footnotehinttrue 
 
@@ -908,9 +903,9 @@ File: images/general/pmwf.pdf Graphic file (type QTm)
  <use  "images/general/pmwf.pdf" >
 File: images/general/runtr.pdf Graphic file (type QTm)
 
-<use  "images/general/runtr.pdf" >
+<use  "images/general/runtr.pdf" > [6]
 Missing character: There is no ’ in font cmr10!
- [6] [7] [8]) [9]
+ [7] [8]) [9]
 \openout2 = `2/stateofart.aux'.
 
  (./2/stateofart.tex
@@ -922,104 +917,103 @@ Missing character: There is no ’ in font cmr10!
 ]
 Missing character: There is no ’ in font cmr10!
 Missing character: There is no ’ in font cmr10!
-Missing character: There is no ’ in font cmr10!
- [11]
 File: images/general/ml1.pdf Graphic file (type QTm)
- <use  "images/general/ml1.pdf" > [12]
+ <use  "images/general/ml1.pdf" >
+Missing character: There is no ’ in font cmr10!
+ [11] [12]
 Missing character: There is no ’ in font cmr10!
 Missing character: There is no ’ in font cmr10!
 Missing character: There is no ’ in font cmr10!
+ [13]
 File: images/general/cm.pdf Graphic file (type QTm)
 
 <use  "images/general/cm.pdf" >
 Missing character: There is no ’ in font cmr10!
 Missing character: There is no ’ in font cmr10!
- [13] [14]
+ [14]
 File: images/general/roc.pdf Graphic file (type QTm)
- <use  "images/general/roc.pdf" >
-[15] [16] [17]
+ <use  "images/general/roc.pdf" > [15]
+[16] [17]
 Missing character: There is no ’ in font cmr10!
- [18]) [19]
+ [18] [19]) [20]
 \openout2 = `3/researchquestion.aux'.
 
  (./3/researchquestion.tex
  3.
-[20
+[21
 
 
 
-] [21]
+] [22]
 File: images/general/ppmwf.pdf Graphic file (type QTm)
  <use  "images/general/ppmwf.pdf" >
 Missing character: There is no ’ in font cmr10!
- [22] [23] [24] [25]
+ [23] [24] [25] [26]
 File: images/general/enc1.pdf Graphic file (type QTm)
 
-<use  "images/general/enc1.pdf" > [26]
+<use  "images/general/enc1.pdf" >
+Underfull \vbox (badness 3148) has occurred while \output is active []
+
+ [27]
 File: images/general/tax.pdf Graphic file (type QTm)
- <use  "images/general/tax.pdf" >
-[27]) [28]
+
+<use  "images/general/tax.pdf" > [28] [29]) [30]
 \openout2 = `3/contributions.aux'.
 
  (./3/contributions.tex
  4.
-[29
+[31
 
 
 
 ]
 File: images/general/catb.pdf Graphic file (type QTm)
- <use  "images/general/catb.pdf" > [30]
+ <use  "images/general/catb.pdf" > [32]
 File: images/general/cat1.pdf Graphic file (type QTm)
  <use  "images/general/cat1.pdf" >
-[31]
+[33]
 File: images/general/cat_enc.pdf Graphic file (type QTm)
- <use  "images/general/cat_enc.pdf" > [32]
+ <use  "images/general/cat_enc.pdf" > [34]
 File: images/general/dwt1.pdf Graphic file (type QTm)
 
-<use  "images/general/dwt1.pdf" > [33]
+<use  "images/general/dwt1.pdf" > [35]
 File: images/general/dwt4.pdf Graphic file (type QTm)
  <use  "images/general/dwt4.pdf" >
-[34] [35] [36]
+[36] [37] [38]
 File: images/general/dwt5.pdf Graphic file (type QTm)
- <use  "images/general/dwt5.pdf" > [37]
+ <use  "images/general/dwt5.pdf" > [39]
 File: images/general/inter1.pdf Graphic file (type QTm)
 
-<use  "images/general/inter1.pdf" > [38]) [39]
+<use  "images/general/inter1.pdf" > [40]) [41]
 \openout2 = `4/casestudies.aux'.
 
  (./4/casestudies.tex
  5.
 File: images/general/all2.pdf Graphic file (type QTm)
-<use  "images/general/all2.pdf" > [40
+<use  "images/general/all2.pdf" > [42
 
 
 
 ]
-Missing character: There is no … in font cmr10!
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[41] [42] [43]
+[43] [44] [45]
 File: images/general/all3.pdf Graphic file (type QTm)
- <use  "images/general/all3.pdf" > [44]
+ <use  "images/general/all3.pdf" > [46]
 Missing character: There is no ’ in font cmr10!
- [45]
-Overfull \hbox (34.16933pt too wide) in paragraph at lines 182--193
+ [47]
+Overfull \hbox (34.16933pt too wide) in paragraph at lines 187--198
 [][] 
  []
 
-[46]
+[48]
 File: images/general/dwtnew.pdf Graphic file (type QTm)
- <use  "images/general/dwtnew.pdf" >
-Underfull \vbox (badness 1199) has occurred while \output is active []
-
- [47]
+ <use  "images/general/dwtnew.pdf" > [49]
 File: images/catboost/rplot_cd_classifiers.pdf Graphic file (type QTm)
 
 <use  "images/catboost/rplot_cd_classifiers.pdf" >
-Overfull \hbox (14.1993pt too wide) in paragraph at lines 239--240
+Overfull \hbox (14.1993pt too wide) in paragraph at lines 244--245
  [] 
  []
 
@@ -1068,42 +1062,42 @@ m)
 File: images/catboost/graphs/production_CatBoost_xgboost.pdf Graphic file (type
  QTm)
 
-<use  "images/catboost/graphs/production_CatBoost_xgboost.pdf" > [48] [49]
-[50] [51] [52] [53]
+<use  "images/catboost/graphs/production_CatBoost_xgboost.pdf" > [50] [51]
+[52] [53] [54] [55]
 File: images/general/catwaveletexp.pdf Graphic file (type QTm)
  <use  "images/general/catwaveletexp.pdf" >
-Overfull \hbox (33.42549pt too wide) in paragraph at lines 472--477
+Overfull \hbox (33.42549pt too wide) in paragraph at lines 477--482
 [][]  
  []
 
 
-Overfull \hbox (52.07095pt too wide) in paragraph at lines 482--487
+Overfull \hbox (52.07095pt too wide) in paragraph at lines 487--492
  [][]
  []
 
 File: images/wavelet/rplot_cd_classifiers.pdf Graphic file (type QTm)
 <use  "images/wavelet/rplot_cd_classifiers.pdf" >
-Overfull \hbox (14.1993pt too wide) in paragraph at lines 580--581
+Overfull \hbox (14.1993pt too wide) in paragraph at lines 585--586
  [] 
  []
 
-[54
+[56
 
 ]
 File: images/wavelet/rplot_cd_catboost.pdf Graphic file (type QTm)
  <use  "images/wavelet/rplot_cd_catboost.pdf" >
-Overfull \hbox (14.1993pt too wide) in paragraph at lines 591--592
+Overfull \hbox (14.1993pt too wide) in paragraph at lines 596--597
  [] 
  []
 
 
 Underfull \vbox (badness 1033) has occurred while \output is active []
 
- [55]
-[56]
+ [57]
+[58]
 File: images/wavelet/graphs2/sepsis_1.pdf Graphic file (type QTm)
  <use  "images/wavelet/graphs2/sepsis_1.pdf" >
-Overfull \hbox (8.5167pt too wide) in paragraph at lines 612--613
+Overfull \hbox (8.5167pt too wide) in paragraph at lines 617--618
 [][]\OT1/cmr/m/n/10.95 = 
  []
 
@@ -1135,20 +1129,20 @@ File: images/wavelet/graphs2/traffic.pdf Graphic file (type QTm)
 <use  "images/wavelet/graphs2/traffic.pdf" >
 File: images/wavelet/graphs2/production.pdf Graphic file (type QTm)
 
-<use  "images/wavelet/graphs2/production.pdf" > [57] [58] [59] [60]
+<use  "images/wavelet/graphs2/production.pdf" > [59] [60] [61] [62]
 File: images/general/inter1.pdf Graphic file (type QTm)
 
-<use  "images/general/inter1.pdf" > [61
+<use  "images/general/inter1.pdf" > [63
 
-] [62]
+] [64]
 File: images/inter/rplot_cd_classifiers.pdf Graphic file (type QTm)
 
 <use  "images/inter/rplot_cd_classifiers.pdf" >
-Overfull \hbox (14.1993pt too wide) in paragraph at lines 783--784
+Overfull \hbox (14.1993pt too wide) in paragraph at lines 788--789
  [] 
  []
 
-[63]
+[65]
 File: images/inter/rf/bpic2012_D.pdf Graphic file (type QTm)
  <use  "images/inter/rf/bpic2012_D.pdf" >
 File: images/inter/rf/bpic2015_1.pdf Graphic file (type QTm)
@@ -1177,18 +1171,18 @@ File: images/inter/catboost/bpic2017_R.pdf Graphic file (type QTm)
 <use  "images/inter/catboost/bpic2017_R.pdf" >
 File: images/inter/catboost/production.pdf Graphic file (type QTm)
 
-<use  "images/inter/catboost/production.pdf" > [64] [65] [66] [67]
+<use  "images/inter/catboost/production.pdf" > [66] [67] [68] [69]
 File: images/shap/false_force_plot_sc.png Graphic file (type QTm)
 
 <use  "images/shap/false_force_plot_sc.png" >
 File: images/shap/true_fp.png Graphic file (type QTm)
 
-<use  "images/shap/true_fp.png" > [68
+<use  "images/shap/true_fp.png" > [70
 
 ]
 File: images/shap/allsamples_ongoing.png Graphic file (type QTm)
 
-<use  "images/shap/allsamples_ongoing.png" > [69]
+<use  "images/shap/allsamples_ongoing.png" > [71]
 File: images/shap/summary_plot.pdf Graphic file (type QTm)
 
 <use  "images/shap/summary_plot.pdf" >
@@ -1197,10 +1191,10 @@ File: images/shap/feature_importance.pdf Graphic file (type QTm)
 <use  "images/shap/feature_importance.pdf" >
 File: images/shap/pdp_nr_ongoing.pdf Graphic file (type QTm)
 
-<use  "images/shap/pdp_nr_ongoing.pdf" > [70]
+<use  "images/shap/pdp_nr_ongoing.pdf" > [72]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [71]
+ [73]
 File: images/catboost/time/catboost/offline/bpic2017_A.pdf Graphic file (type Q
 Tm)
 
@@ -1226,9 +1220,9 @@ File: images/catboost/time/catboost/online/sepsis_2.pdf Graphic file (type QTm)
 
 <use  "images/catboost/time/catboost/online/sepsis_2.pdf" >
 
-LaTeX Warning: Float too large for page by 34.18573pt on input line 1119.
+LaTeX Warning: Float too large for page by 34.18573pt on input line 1124.
 
-[72] [73] [74]
+[74] [75] [76]
 File: images/wavelet/time/cat_production.pdf Graphic file (type QTm)
  <use  "images/wavelet/time/cat_production.pdf" >
 File: images/wavelet/time/wavelet_production.pdf Graphic file (type QTm)
@@ -1241,35 +1235,35 @@ File: images/wavelet/time/p_w_production.pdf Graphic file (type QTm)
 
 <use  "images/wavelet/time/p_w_production.pdf" >
 
-LaTeX Warning: Float too large for page by 35.45921pt on input line 1278.
+LaTeX Warning: Float too large for page by 35.45921pt on input line 1283.
 
-[75] [76]
+[77] [78]
 
-LaTeX Warning: Float too large for page by 102.4446pt on input line 1393.
+LaTeX Warning: Float too large for page by 102.4446pt on input line 1398.
 
-[77] [78]) [79]
+[79] [80]) [81]
 \openout2 = `5/conclusions.aux'.
 
  (./5/conclusions.tex
  6.
-[80
+[82
 
 
 
-]) [81] (./thesis.bbl (./thesis.brf)
+]) [83] (./thesis.bbl (./thesis.brf)
 \tf@brf=\write8
 \openout8 = `thesis.brf'.
 
- [82
+ [84
 
 
 ]
 Missing character: There is no ’ in font cmr6!
-) [83] [84
+) [85] [86
 
 ]
 Appendix A.
-[85
+[87
 
 ]
 Appendix B.
@@ -1280,9 +1274,9 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 359.
- [86
+ [88
 
-] [87]
+] [89]
 File: images/catboost/graphslogit/sepsis_1_CatBoost_logit.pdf Graphic file (typ
 e QTm)
 
@@ -1450,8 +1444,8 @@ LaTeX Warning: Float too large for page by 52.39659pt on input line 1327.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[88] [89] [90] [91] [92] [93] [94] [95] [96] [97] [98] [99] [100] [101]
-[102] [103] [104]
+[90] [91] [92] [93] [94] [95] [96] [97] [98] [99] [100] [101] [102] [103]
+[104] [105] [106]
 File: images/wavelet/graphs2cat/bpic2011_1.pdf Graphic file (type QTm)
  <use  "images/wavelet/graphs2cat/bpic2011_1.pdf" >
 File: images/wavelet/graphs2cat/bpic2015_1.pdf Graphic file (type QTm)
@@ -1604,11 +1598,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[105
+[107
 
 
-] [106] [107] [108] [109] [110] [111] [112] [113] [114] [115] [116]
-[117] [118] [119] [120] [121] [122]
+] [108] [109] [110] [111] [112] [113] [114] [115] [116] [117] [118]
+[119] [120] [121] [122] [123] [124]
 
 LaTeX Warning: Float too large for page by 14.51038pt on input line 2293.
 
@@ -1749,10 +1743,10 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[123
+[125
 
-] [124] [125] [126] [127] [128] [129] [130] [131] [132] [133] [134]
-[135] [136] [137] [138] [139] [140]
+] [126] [127] [128] [129] [130] [131] [132] [133] [134] [135] [136]
+[137] [138] [139] [140] [141] [142]
 
 LaTeX Warning: Float too large for page by 102.4446pt on input line 3097.
 
@@ -1765,7 +1759,7 @@ LaTeX Warning: Float too large for page by 102.4446pt on input line 3318.
 
 LaTeX Warning: Float too large for page by 102.4446pt on input line 3430.
 
-[141] [142] [143] [144]
+[143] [144] [145] [146]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3446.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 3446.
  (./thesis.aux (./title_page/stardard_page.aux)
@@ -1783,11 +1777,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3446.
  ) 
 Here is how much of TeX's memory you used:
  13431 strings out of 493925
- 199817 string characters out of 6150908
- 565673 words of memory out of 5000000
+ 199809 string characters out of 6150908
+ 565849 words of memory out of 5000000
  16344 multiletter control sequences out of 15000+600000
  20233 words of font info for 74 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 43i,21n,50p,2489b,699s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,21n,50p,2761b,699s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (156 pages).
+Output written on thesis.pdf (158 pages).
